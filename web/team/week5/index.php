@@ -1,5 +1,5 @@
 <?php
-  include_once('./dbconnect.php');
+  include_once('../../dbconnect.php');
 
   $bookListQuery = $db->query('SELECT DISTINCT book FROM public.scriptures;');
   $bookListQuery->execute();
