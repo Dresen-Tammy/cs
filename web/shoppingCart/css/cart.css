@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #015249;
+  overflow-x: hidden;
+  height: 100%;
+}
+html {
+  background-image: url(../images/recyclery-back.jpg);
+  background-position: center center;
+  background-size: contain;
+
+}
+body {
+  position: relative;
+}
+
+/* Fonts */
+h1 {
+  color: #015249;
+}
+
+/* nav */
+header {
+  padding: 10px;
+  height: 100px;
+  background-color: #b3a580;
+}
+.center {
+  width: 90%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.logo {
+  margin-top: 20px;
+}
+.button1 {
+  float: right;
+  text-decoration: none;
+  margin-top: 35px;
+  padding: 5px 10px;
+  color: #f4f0cb;
+  background-color: #0b8944;
+  border-radius: 25px;
+
+}
+.button1 span {
+  background-color: #f4f0cb;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: #0b8944;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+header a:hover {
+  background-color: #b7c68b;
+  transition: all .5s;
+
+
+}
+header a:active {
+  background-color: white;
+  color: #0b8944;
+}
+
+
+
+/* Main */
+
+ul li {
+  line-height: 1.8em;
+
+}
+.item {
+  margin-top: 20px;
+  margin-left: 0;
+  display: block;
+}
+.price {
+  margin: 0 10px;
+  width: 60%;
+  text-align: right;
+  display: inline-block;
+}
+.total {
+  text-align: right;
+  width: 80%;
+  display: inline-block;
+
+}
+.p {
+  margin-left: 45px;
+}
+ul a {
+
+
+  color: #0b8944;
+  padding: 2px 10px;
+
+}
+ul a:hover {
+  color: #685642
+}
+label {
+  width: 120px;
+  display: inline-block;
+}
+.error {
+  color: red;
+}
+.address {
+  width: 50%;
+  display: inline-block;
+}
+/* media queries medium */
+@media (min-width: 600px) {
+.center {
+  width: 90%;
+}
+.item {
+  display: inline-block;
+  width: 310px;
+}
+.price {
+  width: 60px;
+}
+.address {
+  width: 70%;
+}
+}
+/* media queries large */
+@media (min-width: 800px) {
+}
