@@ -1,58 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/conference.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/ride.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/alaska.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assignments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/fish.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/tammy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/week2jq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/more.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/ride/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/css/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/checkpoint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/cookie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/gear.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/geometry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/giant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/giro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/lazer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/pearl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/recyclery copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/recyclery-back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/recyclery-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/recyclery.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/recyclery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/roubaix.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/ruby.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/images/sidi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/library/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/templates/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/view/browseItems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/view/checkOut.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/view/confirmation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/view/viewCart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/shoppingCart/view/viewItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/team/week2/week2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/team/week2/week2BS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/team/week3/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/head.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/template/nav.php" afterDir="false" />
-    </list>
+    <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +18,8 @@
       <file leaf-file-name="connect.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/ride/library/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state relative-caret-position="44">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -274,12 +223,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526678331953</updated>
       <workItem from="1526731305724" duration="823000" />
-      <workItem from="1526734240334" duration="3729000" />
+      <workItem from="1526734240334" duration="4705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4552000" />
+    <option name="totallyTimeSpent" value="5528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1306" y="-1098" width="1260" height="733" extended-state="0" />
@@ -287,10 +236,10 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50079364" side_tool="true" visible="true" weight="0.25341427" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25341427" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920633" weight="0.25341427" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -343,8 +292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/ride/library/connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        <state relative-caret-position="44">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
