@@ -16,7 +16,7 @@
       <div>
       <h2>Assignments</h2>
       <ul>
-        <li>Coming Soon</li>
+        <li><a href="shoppingCart/index.php">Shopping Cart</a></li>
       </ul>
     </div>
     </main>

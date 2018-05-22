@@ -8,7 +8,7 @@
 session_start();
 
 // Get the database connetion file
-require_once 'library/connections.php'
+require_once 'dbconnect.php'
 
 
 
@@ -18,3 +18,5 @@ require_once 'library/connections.php'
 
 
 ?>
+
+
