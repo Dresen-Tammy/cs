@@ -55,48 +55,59 @@ INSERT INTO public.ride
 (rider_id
 ,trail_id
 ,ride_date
-,duration)
+,duration
+,ride_name)
 VALUES
 (1
 ,1
 ,current_date
 ,'1 hours 17 minutes'
+,'ride 1'
 );
 
 INSERT INTO public.ride
 (rider_id
 ,trail_id
 ,ride_date
-,duration)
+,duration
+,ride_name
+)
 VALUES
 (2
 ,1
 ,current_date
 ,'1 hours 19 minutes'
+,'ride 2'
 );
 
 INSERT INTO public.ride
 (rider_id
 ,trail_id
 ,ride_date
-,duration)
+,duration
+,ride_name
+)
 VALUES
 (1
 ,2
 ,current_date
 ,'2 hours 37 minutes'
+,'Orange Blossom Heaven'
 );
 
 INSERT INTO public.ride
 (rider_id
 ,trail_id
 ,ride_date
-,duration)
+,duration
+,ride_name
+)
 VALUES
 (2
 ,3
 ,current_date
 ,'1 hours 52 minutes'
+,'Hills Training'
 );
 
 

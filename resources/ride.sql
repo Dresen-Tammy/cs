@@ -18,6 +18,7 @@ CREATE TABLE public.trail (
 
 CREATE TABLE public.ride (
     ride_id     SERIAL    constraint  pk_ride_1  PRIMARY KEY,
+    ride_name    VARCHAR(255) constraint nn_ride_5 NOT NULL,
     rider_id     INTEGER   constraint  nn_ride_1  NOT NULL,
     trail_id     INTEGER  constraint  nn_ride_2  NOT NULL,
     ride_date   DATE      constraint  nn_ride_3  NOT NULL,

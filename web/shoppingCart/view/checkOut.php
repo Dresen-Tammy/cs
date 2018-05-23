@@ -30,7 +30,7 @@ Clicking button will store item in session, return to browseItem page  -->
         ?>
         <form method="post" action="index.php">
           <fieldset>
-          </legend class="error">* required field</legend><br>
+          <legend class="error">* required field</legend><br>
           <?php if (isset($error)) {echo $error;} ?>
           <label for name class="label">Street Address:</label>
           <input class="address" type="text" name="street" value="<?php echo $street;?>" required><span class="error">*</span><br>
