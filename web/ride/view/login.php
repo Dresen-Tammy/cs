@@ -22,12 +22,12 @@ Will include fields for username and password, login button, and register button
   </header>
   <main>
       <div class="center">
-          <h1>Ride Keeper</h1>
+          <h1>RideKeeper</h1>
           <h2>Login</h2>
               <form method="post" action="index.php">
                   <fieldset>
                       <legend class="error">* required field</legend>
-                      <?php if (isset($error)) {echo $error;} ?>
+                      <?php if (isset($message)) {echo $message;} ?>
                       <label for="name" class="label">Name</label>
                       <input class="address" type="text" name="name" value="<?php echo $name;?>" required><span class="error">*</span><br>
                       <label for="password" class="label">Password</label>

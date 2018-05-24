@@ -12,6 +12,7 @@ Will include fields for username and password, login button, and register button
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="css/cart.css" type="text/css" rel="stylesheet">
+      <script src="js/ride.js"></script>
   </head>
   <body>
   <header>
@@ -22,21 +23,42 @@ Will include fields for username and password, login button, and register button
   </header>
   <main>
       <div class="center">
-          <h1>Ride Keeper</h1>
-          <h2>View Rides</h2>
+          <h1>RideKeeper</h1>
+          <div class="rideList">
+          <h2> <?php if (isset($title)) { echo $title; }?></h2>
           <?php
-          echo "<option value='' selected></option>";
-          foreach ($bookList as $book) {
-              echo "<option value='{$book}'>";
-              echo $book;
-              echo "</option>";
-          }
-          ?>
-          <a class="button1" href="index.php?action=byTrail">View By Trail</a>
-          <a class="button1" href="index.php?action=byDate">View By Date</a>
-          <a class="button1" href="index.php?action=thirtyDays">Last 30 Days</a>
-          <a class="button1" href="index.php?action=sevenDays">Last 7 Days</a>
 
+
+          if(isset($list1)) {echo $list1;
+          echo "Duration: " . $arrayList[3]->format('%h:%I') . " hours</p>";}
+            ?>
+          </div>
+          <form class="popup hide" id="trailList" method="post" action="index.php">
+              <h2>Choose Trail</h2>
+              <?php if(isset($message)) { echo $message;}
+               if(isset($trailSelect)) {echo $trailSelect;} ?>
+              <input type="submit" class="button1" onclick="hideForm2" value="Enter">
+              <input type="hidden" name="action" value="trail">
+          </form>
+          <form class="popup hide" id="dateForm" method="post" action="index.php">
+            <h2>Enter Start and End Dates</h2>
+              <?php if(isset($message)) { echo $message;} ?>
+              <label for="startDate" class="label">Start Date</label>
+              <input type="date" name="startDate" class="address">
+              <label for="endDate" class="label">End Date</label>
+              <input type="date" name="endDate" class="address">
+              <input type="submit" class="button1"  onclick="hideForm()" value="Submit">
+              <input type="hidden" name="action" value="byDate">
+          </form>
+
+
+          <div class="buttons" id="buttons">
+          <a class="button1 button2" onclick="unhide2()">View By Trail</a>
+          <a class="button1 button2" onclick="unhide()">View By Date</a>
+          <a class="button1 button2" href="index.php?action=view&time=seven">Last 7 Days</a>
+          <a class="button1 button2" href="index.php?action=view&time=thirty">Last 30 Days</a>
+
+          </div>
       </div>
   </main>
   </body>

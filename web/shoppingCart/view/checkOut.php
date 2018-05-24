@@ -32,13 +32,13 @@ Clicking button will store item in session, return to browseItem page  -->
           <fieldset>
           <legend class="error">* required field</legend><br>
           <?php if (isset($error)) {echo $error;} ?>
-          <label for name class="label">Street Address:</label>
+          <label for="street" class="label">Street Address:</label>
           <input class="address" type="text" name="street" value="<?php echo $street;?>" required><span class="error">*</span><br>
-          <label for name class="label">City:</label>
+          <label for="city" class="label">City:</label>
           <input class="address" type="text" name="city" value="<?php echo $city;?>" required><span class="error" >*</span><br>
-          <label for name class="label">State:</label>
+          <label for="state" class="label">State:</label>
           <input class="address" type="text" name="state" value="<?php echo $state;?>" required><span class="error">*</span><br>
-          <label for name class="label">ZIP Code:</label>
+          <label for="zip" class="label">ZIP Code:</label>
           <input class="address" type="number" name="zip" value="<?php echo $zip;?>" required><span class="error">*</span><br>
           <input  class="button1" type="submit" name="submit" value="COMPLETE PURCHASE">
           <input type="hidden" name="action" value="confirm">
