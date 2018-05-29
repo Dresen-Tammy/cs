@@ -1,0 +1,14 @@
+* {
+  color: rgb(70, 70, 70);
+  box-sizing: border-box;
+}
+body {
+  background: rgb(137, 170, 232);
+}
+h1, h2 {
+  font-family: Helvetica, sans-serif;
+}
+select {
+  font-size: 1.2em;
+}
+
