@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/web/team/wk6/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/team/wk6/dbconnect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/team/wk6/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/team/wk6/teach05.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/team/wk6/teach06.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/more.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/team/week6" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,15 +41,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week5/scripture.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="teach06.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/team/week5/teach06.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,26 +55,31 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="more.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="more.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/more.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week6/index.php">
+      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/team/wk6/dbconnect.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/team/wk6/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+            <state relative-caret-position="331">
+              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="teach06.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week6/teach06.sql">
+        <entry file="file://$PROJECT_DIR$/web/team/wk6/teach06.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
@@ -86,7 +88,7 @@
         </entry>
       </file>
       <file leaf-file-name="teach05.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week6/teach05.sql">
+        <entry file="file://$PROJECT_DIR$/web/team/wk6/teach05.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
               <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
@@ -196,6 +198,19 @@
             </path>
             <path>
               <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="team" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="team" type="462c0819:PsiDirectoryNode" />
+              <item name="wk6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
             <path>
@@ -247,6 +262,7 @@
       <recent name="$PROJECT_DIR$/web/ride" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/team/wk6" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web/team/week6" />
@@ -267,7 +283,7 @@
   </component>
   <component name="RunManager" selected="PHP Script.index.php (1)">
     <configuration name="connect.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/ride/library/connect.php" />
-    <configuration name="index.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/team/week6/index.php" />
+    <configuration name="index.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/team/wk6/index.php" />
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/ride/index.php" />
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -379,16 +395,15 @@
       <workItem from="1527104896623" duration="8003000" />
       <workItem from="1527117937155" duration="30763000" />
       <workItem from="1527180789361" duration="19692000" />
-      <workItem from="1527383757223" duration="12209000" />
+      <workItem from="1527383757223" duration="12678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76893000" />
+    <option name="totallyTimeSpent" value="77362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1444" y="-1098" width="1291" height="1333" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17041053" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -678,9 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week6/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/team/week5/scripture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -695,21 +707,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week6/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week6/teach05.sql">
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/teach05.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week6/teach06.sql">
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/teach06.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
@@ -743,7 +748,17 @@
     <entry file="file://$PROJECT_DIR$/web/more.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
         </state>
       </provider>
     </entry>
