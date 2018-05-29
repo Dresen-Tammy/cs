@@ -19,6 +19,7 @@
           <li><a href="team/week2/week2BS.html">Week 2</a></li>
           <li><a href="team/week3/index.php">Week 3</a></li>
           <li><a href="team/week5/index.php">Week 5</a></li>
+            <li><a href="team/week6/index.php">Week 6</a></li>
         </ul>
       </div>
     </main>
