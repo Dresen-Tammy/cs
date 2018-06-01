@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/ride/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/view/viewTrail.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/view/viewTrail.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/ride/index.php">
+      <file leaf-file-name="viewTrail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/ride/view/viewTrail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="184" column="36" lean-forward="true" selection-start-line="184" selection-start-column="36" selection-end-line="184" selection-end-column="36" />
+            <state relative-caret-position="513">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -47,8 +47,8 @@
       <file leaf-file-name="viewRides.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-158">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="627">
+              <caret line="33" column="8" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -124,6 +124,7 @@
       <find>strtot</find>
       <find>addTrail(</find>
       <find>rideList</find>
+      <find>se</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,7 +156,6 @@
         <option value="$PROJECT_DIR$/web/team/week5/dbconnect.php" />
         <option value="$PROJECT_DIR$/web/more.php" />
         <option value="$PROJECT_DIR$/web/team/wk6/teach06.sql" />
-        <option value="$PROJECT_DIR$/web/ride/view/viewTrail.php" />
         <option value="$PROJECT_DIR$/web/team/week5/api.php" />
         <option value="$PROJECT_DIR$/web/ride/api.php" />
         <option value="$PROJECT_DIR$/web/team/wk6/index.php" />
@@ -169,6 +169,7 @@
         <option value="$PROJECT_DIR$/web/ride/dbconnect.php" />
         <option value="$PROJECT_DIR$/resources/rideData2.sql" />
         <option value="$PROJECT_DIR$/web/ride/css/cart.css" />
+        <option value="$PROJECT_DIR$/web/ride/view/viewTrail.php" />
       </list>
     </option>
   </component>
@@ -423,12 +424,12 @@
       <workItem from="1527724728727" duration="13842000" />
       <workItem from="1527791843660" duration="14000" />
       <workItem from="1527791889700" duration="28105000" />
-      <workItem from="1527829330817" duration="11308000" />
+      <workItem from="1527829330817" duration="11450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132671000" />
+    <option name="totallyTimeSpent" value="132813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1294" y="-1091" width="1682" height="978" extended-state="0" />
@@ -440,7 +441,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" weight="0.28009084" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279429" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15279429" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -466,31 +467,31 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" weight="0.28009084" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18291815" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007429" side_tool="true" weight="0.09954338" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925706" weight="0.09954338" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -672,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/view/viewTrail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/api.php" />
     <entry file="file://$PROJECT_DIR$/web/team/week5/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -788,17 +782,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/viewTrail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
         </state>
       </provider>
     </entry>

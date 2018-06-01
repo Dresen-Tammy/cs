@@ -20,15 +20,20 @@ Will include fields for username and password, login button, and register button
 <header>
     <div class="center">
         <img class="logo" src="images/recyclery.png" alt="recyclery logo">
-        <a href='index.php?action=logout' class='button1'>Log Out</a>
-        <a class="button1" href='index.php?action=home' class='button1'>Back</a>
+        <h1>RideKeeper</h1>
     </div>
 </header>
+<nav>
+    <div class="center">
+        <ul class="navUl">
+            <li><a class="nav" href="index.php?action=view&time=all">Rides</a></li>
+            <li><a class="nav" href="index.php?action=addTrail">Trails</a></li>
+            <li><a class='nav' href='index.php?action=logout'>Log Out</a></li>
+        </ul>
+    </div>
+</nav>
 <main>
     <div class="center">
-
-        <h1>RideKeeper</h1>
-
         <div class="rideList">
 
             <?php
