@@ -118,7 +118,7 @@ nav a:hover {
   background-color: #685642;
   color: #f4f0cb;
 }
-.button2 a, .button1 a, button3 a {
+.button2 a, .button1 a, button3 a, .button2 a:visited, .button1 a:visited, button3 a:visited {
   color: #0b8944;
 }
 .button4 {
