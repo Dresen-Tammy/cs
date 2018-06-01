@@ -34,6 +34,12 @@ header {
   background-color: #b3a580;
 
 }
+a, a:visited {
+  color: #685642;
+}
+a:hover {
+  color: #015249;
+}
 nav {
   height: 28px;
   background-color: floralwhite;
