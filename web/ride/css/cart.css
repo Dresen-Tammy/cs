@@ -71,8 +71,9 @@ nav a:hover {
   height: 50px;
 }
 .buttons {
-  float: right;
-  margin-top: -180px;
+   position:absolute;
+  right: 0;
+  bottom: 0;
 }
 .button1 {
   float: right;
@@ -136,7 +137,8 @@ header a:active {
 
 /* Main */
 .rideList {
-  min-height: 200px;
+  min-height: 220px;
+  position: relative;
 }
 ul li {
   line-height: 1.8em;
