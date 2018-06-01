@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/team/wk6/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/team/wk6/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/rideData2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/rideData2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/js/ride.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/js/ride.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/view/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/view/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ride/view/viewRides.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride/view/viewRides.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/team/wk6/teach06.sql" beforeDir="false" afterPath="$PROJECT_DIR$/web/team/wk6/teach06.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,71 +27,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/dbconnect.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/view/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="502">
+              <caret line="33" column="8" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="33" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week5/index.php">
+        <entry file="file://$PROJECT_DIR$/web/ride/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="62" />
+            <state relative-caret-position="434">
+              <caret line="184" column="36" lean-forward="true" selection-start-line="184" selection-start-column="36" selection-end-line="184" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teach06.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/week5/teach06.sql">
+      <file leaf-file-name="viewRides.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="-391">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teach06.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/teach06.sql">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="addTrail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/view/addTrail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="more.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/more.php">
+      <file leaf-file-name="ride.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/js/ride.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="1767">
+              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/wk6/dbconnect.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/team/wk6/index.php">
+        <entry file="file://$PROJECT_DIR$/web/ride/dbconnect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="120" column="62" selection-start-line="120" selection-start-column="62" selection-end-line="120" selection-end-column="62" />
+            <state relative-caret-position="323">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/wk6/style.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="teach06.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/team/wk6/teach06.sql">
+      <file leaf-file-name="rideData2.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/rideData2.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="795">
+              <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -89,8 +102,17 @@
       <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/team/week5/dbconnect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state>
+              <caret selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ride/view/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -99,9 +121,18 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>echo</find>
       <find>$topics</find>
       <find>wk6</find>
+      <find>session_start</find>
+      <find>cookie</find>
+      <find>echo</find>
+      <find>print</find>
+      <find>buildTrailS</find>
+      <find>try</find>
+      <find>trailSelect</find>
+      <find>delete</find>
+      <find>strtot</find>
+      <find>addTrail(</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -123,17 +154,7 @@
         <option value="$PROJECT_DIR$/web/ride/view/functions.php" />
         <option value="$PROJECT_DIR$/web/shoppingCart/index.php" />
         <option value="$PROJECT_DIR$/web/ride/view/comingSoon.php" />
-        <option value="$PROJECT_DIR$/web/ride/view/home.php" />
-        <option value="$PROJECT_DIR$/resources/rideData2.sql" />
-        <option value="$PROJECT_DIR$/web/ride/view/login.php" />
         <option value="$PROJECT_DIR$/web/shoppingCart/view/checkOut.php" />
-        <option value="$PROJECT_DIR$/web/ride/api.php" />
-        <option value="$PROJECT_DIR$/web/ride/js/ride.js" />
-        <option value="$PROJECT_DIR$/web/ride/functions.php" />
-        <option value="$PROJECT_DIR$/web/ride/view/viewRides.php" />
-        <option value="$PROJECT_DIR$/web/ride/css/cart.css" />
-        <option value="$PROJECT_DIR$/web/ride/index.php" />
-        <option value="$PROJECT_DIR$/web/ride/dbconnect.php" />
         <option value="$PROJECT_DIR$/web/dbconnect.php" />
         <option value="$PROJECT_DIR$/web/team/week5/teach05.sql" />
         <option value="$PROJECT_DIR$/web/team/week5/teach06.sql" />
@@ -142,7 +163,21 @@
         <option value="$PROJECT_DIR$/web/team/week6/teach06.sql" />
         <option value="$PROJECT_DIR$/web/team/week5/dbconnect.php" />
         <option value="$PROJECT_DIR$/web/more.php" />
+        <option value="$PROJECT_DIR$/web/team/wk6/teach06.sql" />
+        <option value="$PROJECT_DIR$/web/ride/view/viewTrail.php" />
+        <option value="$PROJECT_DIR$/web/team/week5/api.php" />
+        <option value="$PROJECT_DIR$/web/ride/api.php" />
         <option value="$PROJECT_DIR$/web/team/wk6/index.php" />
+        <option value="$PROJECT_DIR$/web/ride/functions.php" />
+        <option value="$PROJECT_DIR$/web/ride/index.php" />
+        <option value="$PROJECT_DIR$/web/ride/view/viewRides.php" />
+        <option value="$PROJECT_DIR$/web/ride/js/ride.js" />
+        <option value="$PROJECT_DIR$/web/ride/view/addTrail.php" />
+        <option value="$PROJECT_DIR$/web/ride/view/home.php" />
+        <option value="$PROJECT_DIR$/web/ride/view/login.php" />
+        <option value="$PROJECT_DIR$/web/ride/css/cart.css" />
+        <option value="$PROJECT_DIR$/web/ride/dbconnect.php" />
+        <option value="$PROJECT_DIR$/resources/rideData2.sql" />
       </list>
     </option>
   </component>
@@ -161,16 +196,17 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1444" />
-    <option name="y" value="-1098" />
-    <option name="width" value="1291" />
-    <option name="height" value="1333" />
+    <option name="x" value="1294" />
+    <option name="y" value="-1091" />
+    <option name="width" value="1682" />
+    <option name="height" value="978" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,12 +217,30 @@
             <path>
               <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
+              <item name="nbproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="ride" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="ride" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
@@ -212,37 +266,10 @@
               <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </path>
-            <path>
-              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cs313-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="cs313-php" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="team" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -254,18 +281,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/ride" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/team/wk6" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/team/wk6" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/team/week6" />
       <recent name="$PROJECT_DIR$/web/ride/view" />
-      <recent name="$PROJECT_DIR$/web/ride" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/team/wk6" />
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/web/team/week6" />
       <recent name="$PROJECT_DIR$/web/ride" />
     </key>
   </component>
@@ -282,9 +309,11 @@
     </option>
   </component>
   <component name="RunManager" selected="PHP Script.index.php (1)">
+    <configuration name="api.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/team/week5/api.php" />
     <configuration name="connect.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/ride/library/connect.php" />
     <configuration name="index.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/team/wk6/index.php" />
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/ride/index.php" />
+    <configuration name="viewRides.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/ride/view/viewRides.php" />
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -370,10 +399,14 @@
       <item itemvalue="PHP Script.connect.php" />
       <item itemvalue="PHP Script.index.php" />
       <item itemvalue="PHP Script.index.php (1)" />
+      <item itemvalue="PHP Script.viewRides.php" />
+      <item itemvalue="PHP Script.api.php" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.index.php (1)" />
+        <item itemvalue="PHP Script.api.php" />
+        <item itemvalue="PHP Script.viewRides.php" />
         <item itemvalue="PHP Script.index.php" />
         <item itemvalue="PHP Script.connect.php" />
       </list>
@@ -395,29 +428,34 @@
       <workItem from="1527104896623" duration="8003000" />
       <workItem from="1527117937155" duration="30763000" />
       <workItem from="1527180789361" duration="19692000" />
-      <workItem from="1527383757223" duration="12791000" />
+      <workItem from="1527383757223" duration="14718000" />
+      <workItem from="1527724728727" duration="13842000" />
+      <workItem from="1527791843660" duration="14000" />
+      <workItem from="1527791889700" duration="28105000" />
+      <workItem from="1527829330817" duration="10014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77475000" />
+    <option name="totallyTimeSpent" value="131377000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1444" y="-1098" width="1291" height="1333" extended-state="0" />
+    <frame x="1294" y="-1091" width="1682" height="978" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17041053" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007429" side_tool="true" weight="0.09954338" />
-      <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" visible="true" weight="0.15170771" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" weight="0.28009084" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925706" weight="0.09954338" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279429" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925706" weight="0.09954338" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -433,9 +471,39 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984127" visible="true" weight="0.0" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18291815" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007429" side_tool="true" weight="0.09954338" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925706" weight="0.09954338" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -446,16 +514,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/web/team/week5/main.js</url>
-          <line>2</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/web/team/week5/main.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/web/team/week5/index.php</url>
           <line>1</line>
@@ -466,27 +524,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2755">
-          <caret line="145" column="21" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/shoppingCart/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2546">
-          <caret line="134" column="73" lean-forward="true" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
-          <caret line="150" column="16" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/ride/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -572,111 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/view/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/rideData2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/shoppingCart/view/checkOut.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/js/ride.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/shoppingCart/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
-          <caret line="175" selection-start-line="175" selection-end-line="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4028">
-          <caret line="212" column="38" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week5/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week5/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/rideData.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="2" selection-start-line="53" selection-end-line="65" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/ride.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week5/teach05.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="198" lean-forward="true" selection-start-line="10" selection-end-line="15" selection-end-column="198" />
         </state>
       </provider>
     </entry>
@@ -687,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/ride/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="92" column="25" lean-forward="true" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/team/wk6/teach05.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -701,33 +630,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/wk6/teach06.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week5/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week5/teach06.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/teach06.sql">
       <provider selected="true" editor-type-id="text-editor" />
@@ -739,8 +646,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/wk6/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/web/team/week5/teach06.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/week5/teach05.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/wk6/teach06.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/shoppingCart/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3325">
+          <caret line="175" selection-start-line="175" selection-end-line="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/viewTrail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/api.php" />
+    <entry file="file://$PROJECT_DIR$/web/team/week5/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/week5/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/team/week5/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,13 +717,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/wk6/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/team/wk6/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="120" column="62" selection-start-line="120" selection-start-column="62" selection-end-line="120" selection-end-column="62" />
+        <state relative-caret-position="1349">
+          <caret line="71" column="51" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/rideData.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="65" column="2" selection-start-line="53" selection-end-line="65" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ride.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="217" column="126" selection-start-line="217" selection-start-column="126" selection-end-line="217" selection-end-column="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="184" column="36" lean-forward="true" selection-start-line="184" selection-start-column="36" selection-end-line="184" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/viewRides.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/addTrail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/js/ride.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1767">
+          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/view/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/css/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/week5/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ride/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/rideData2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
         </state>
       </provider>
     </entry>

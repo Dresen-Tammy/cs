@@ -1,5 +1,7 @@
 <?php
-$name;
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.php');
+}
 ?>
 <!DOCTYPE html>
 <!-- Tammy Dresen, CS313,
@@ -18,12 +20,24 @@ Will include fields for username and password, login button, and register button
   <header>
       <div class="center">
           <img class="logo" src="images/recyclery.png" alt="recyclery logo">
-          <a href='index.php?action=logout' class='button1'>Log Out</a>"
+          <h1>RideKeeper</h1>
       </div>
   </header>
+  <nav>
+      <div class="center">
+          <ul class="navUl">
+              <li><a class="nav" href="index.php?action=view&time=all">Rides</a></li>
+              <li><a class="nav" href="index.php?action=addTrail">Trails</a></li>
+              <li><a class='nav' href='index.php?action=logout'>Log Out</a></li>
+          </ul>
+      </div>
+  </nav>
   <main>
       <div class="center">
-          <h1>RideKeeper</h1>
+
+          <?php if(isset($message)) { echo $message;} ?>
+
+
           <div class="rideList">
           <h2> <?php if (isset($title)) { echo $title; }?></h2>
           <?php
@@ -32,11 +46,23 @@ Will include fields for username and password, login button, and register button
           if(isset($list1)) {echo $list1;
           echo "Duration: " . $arrayList[3]->format('%h:%I') . " hours</p>";}
             ?>
+              <div class="buttons" id="buttons">
+                  <a class="button2" href="index.php?action=addRide">Add New Ride</a><br>
+                  <a class="button2" onclick="unhide2()">View By Trail</a><br>
+                  <a class="button2" onclick="unhide()">View By Date</a><br>
+                  <a class="button2" href="index.php?action=view&time=seven">Last 7 Days</a><br>
+                  <a class="button2" href="index.php?action=view&time=thirty">Last 30 Days</a><br>
+                  <?php if(isset($deleteButton)) {echo $deleteButton;} ?>
+
+              </div>
           </div>
+
           <form class="popup hide" id="trailList" method="post" action="index.php">
               <h2>Choose Trail</h2>
               <?php if(isset($message)) { echo $message;}
-               if(isset($trailSelect)) {echo $trailSelect;} ?>
+               if(isset($trailChoose)) {echo $trailChoose;}
+                ?>
+
               <input type="submit" class="button1" onclick="hideForm2" value="Enter">
               <input type="hidden" name="action" value="trail">
           </form>
@@ -52,13 +78,8 @@ Will include fields for username and password, login button, and register button
           </form>
 
 
-          <div class="buttons" id="buttons">
-          <a class="button1 button2" onclick="unhide2()">View By Trail</a>
-          <a class="button1 button2" onclick="unhide()">View By Date</a>
-          <a class="button1 button2" href="index.php?action=view&time=seven">Last 7 Days</a>
-          <a class="button1 button2" href="index.php?action=view&time=thirty">Last 30 Days</a>
 
-          </div>
+
       </div>
   </main>
   </body>

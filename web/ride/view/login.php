@@ -1,5 +1,8 @@
 <?php
-$name = 'John';
+  if (isset($_SESSION['loggedin'])) {
+      header('Location: index.php?action=home');
+  }
+
 ?>
 <!DOCTYPE html>
 <!-- Tammy Dresen, CS313,
@@ -17,23 +20,27 @@ Will include fields for username and password, login button, and register button
   <header>
       <div class="center">
           <img class="logo" src="images/recyclery.png" alt="recyclery logo">
-          <!-- if already logged in, add logout button. <if(isset($_SESSION['name']) { echo "<a href='index.php?action=logout' class='button1'>Log Out</a>" } -->
+          <h1>RideKeeper</h1>
       </div>
   </header>
+
+
   <main>
       <div class="center">
-          <h1>RideKeeper</h1>
+
           <h2>Login</h2>
               <form method="post" action="index.php">
                   <fieldset>
                       <legend class="error">* required field</legend>
                       <?php if (isset($message)) {echo $message;} ?>
                       <label for="name" class="label">Name</label>
-                      <input class="address" type="text" name="name" value="<?php echo $name;?>" required><span class="error">*</span><br>
+                      <input class="address" type="text" name="name" required><span class="error">*</span><br>
                       <label for="password" class="label">Password</label>
-                      <input class="address" type="text" name="password" required><span class="error">*</span><br>
-                      <!-- <input class="button1" type="submit" name="action" value="REGISTER"> -->
-                      <input class="button1" type="submit" name="action" value="LOGIN">
+                      <input class="address" type="password" name="password" required><span class="error">*</span><br>
+                      <input class="button1 button4" type="submit" name="action" value="LOGIN">
+                      <input class=" button4 b5" type="submit" name="action" value="REGISTER">
+
+
 
 
                   </fieldset>

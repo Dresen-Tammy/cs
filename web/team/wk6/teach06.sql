@@ -19,7 +19,7 @@ CREATE TABLE topic_scripture (
   PRIMARY KEY (topic_id, scripture_id),
   CONSTRAINT fk_topic_scripture_topic FOREIGN KEY (topic_id) REFERENCES topic (id),
   CONSTRAINT fk_topic_scripture_scripture FOREIGN KEY (scripture_id) REFERENCES scriptures (id),
-  CONSTRAINT uq_scrip_Top_1 UNIQUE (scripture_id, topic_id);
+  CONSTRAINT uq_scrip_Top_1 UNIQUE (scripture_id, topic_id)
 );
 
 CREATE INDEX fk_topic_scripture_scripture_idx ON topic_scripture (scripture_id ASC);
@@ -30,5 +30,5 @@ CREATE INDEX fk_topic_scripture_topic_idx ON topic_scripture (topic_id ASC);
 INSERT INTO topic_scripture (topic_id, scripture_id)
 VALUES (1,1);
 
-conference=# INSERT INTO topic_scripture
-VALUES (2,1), (2,2), (3,3), (4,3), (3,4);
+INSERT INTO topic_scripture (topic_id, scripture_id)
+VALUES (2,1), (2,2), (3,3), (3,2), (3,4);

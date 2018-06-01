@@ -81,3 +81,6 @@ VALUES
 ,'1 hours 32 minutes'
 ,'I love cycling'
 );
+
+ALTER TABLE ride
+CONSTRAINT uq_ride_1 UNIQUE (ride_name, rider_id, trail_id, ride_date, duration);

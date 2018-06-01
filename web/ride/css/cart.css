@@ -22,13 +22,43 @@ body {
 /* Fonts */
 h1 {
   color: #015249;
+  float: right;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* nav */
 header {
   padding: 10px;
-  height: 100px;
+  height: 50px;
   background-color: #b3a580;
+
+}
+nav {
+  height: 28px;
+  background-color: floralwhite;
+  margin-top: -14px;
+}
+
+nav ul, .navUl {
+  list-style: none;
+  text-align: right;
+
+
+}
+nav li {
+  display: inline-block;
+  text-decoration: none;
+  color: #015249;
+
+}
+nav a, nav a:visited {
+  color: #0b8944;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #685642
 }
 .center {
   width: 90%;
@@ -37,12 +67,18 @@ header {
   position: relative;
 }
 .logo {
-  margin-top: 20px;
+  margin-top: 0px;
+  height: 50px;
+}
+.buttons {
+  float: right;
+  margin-top: -150px;
 }
 .button1 {
   float: right;
+
   text-decoration: none;
-  margin-top: 35px;
+  margin-top: -35px;
   padding: 5px 10px;
   color: #f4f0cb;
   background-color: #0b8944;
@@ -61,7 +97,28 @@ header {
   text-align: center;
 }
 .button2 {
-  float:left;
+  display: block;
+  text-decoration: none;
+  margin-top: -15px;
+  padding: 5px 10px;
+  color: #f4f0cb;
+  background-color: #0b8944;
+  border-radius: 25px;
+  margin-left: 10px;
+  text-align: center;
+}
+.button3 {
+  background-color: #685642;
+}
+.button4 {
+  margin-top:10px;
+}
+.b5 {
+  float: right;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  margin-top: 15px;
 }
 
 header a:hover {
@@ -105,20 +162,28 @@ ul li {
 .p {
   margin-left: 45px;
 }
-ul a {
 
 
-  color: #0b8944;
-  padding: 2px 10px;
-
-
-}
-ul a:hover {
-  color: #685642
-}
 label {
   width: 120px;
   display: inline-block;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.label {
+  width: 120px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.inputs {
+  width: 70%;
+  display: inline-block;
+  background-color: #f1f0f0;
+  height: 28px;
+  padding: 0 5px;
+  color: #808080;
+  margin-top: 2px;
+
 }
 .error {
   color: red;
@@ -126,6 +191,7 @@ label {
 .address {
   width: 50%;
   display: inline-block;
+  font-size: 16px;
 }
 .popup {
 
@@ -148,8 +214,23 @@ label {
 .hide {
   visibility: hidden;
 }
+.noShow {
+  display: none;
 
-
+}
+.hours {
+  width: 30px;
+  font-size: 16px;
+}
+.select {
+  font-size: 16px;
+}
+.trailInfo {
+  margin-left: -40px;
+  margin-top: 5px;
+  line-height: 2em;
+  font-size: 16px;
+}
 
 @media (min-width: 450px) {
   .popup {
