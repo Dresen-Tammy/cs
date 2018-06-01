@@ -34,10 +34,10 @@ header {
   background-color: #b3a580;
 
 }
-a, a:visited {
+ul a, ul a:visited {
   color: #685642;
 }
-a:hover {
+ul a:hover {
   color: #015249;
 }
 nav {
