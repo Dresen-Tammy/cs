@@ -38,6 +38,7 @@ if (isset($_SESSION['name'])) {
             {
                 // deliver login page without processing it.
                 include 'view/login.php';
+                exit;
                 break;
             }
 
@@ -56,31 +57,42 @@ if (isset($_SESSION['name'])) {
                 if (empty($name) || empty($password)) {
                     $message = "Please fill in all fields";
                     include 'view/login.php';
-                    break;
+                    exit;
                 }
 
 
-                // check for existing name
-
-                $match = checkName($name, $password, $db);
-
-                if ($match == 1) {
-                    // success. Matching name in database. login
-                    $_SESSION['loggedin'] = TRUE;
-                    $_SESSION['name'] = $name;
-                    $sessionName = $_SESSION['name'];
-                    // create and display add ride view
-                    $trailList = getTrails($db);
-                    $trailSelect = buildTrailAddNew($trailList);
-                    include 'view/home.php';
-                    break;
-                } else {
+                 //check for existing name
+                $clientData = checkName($name, $db);
+                if (!$clientData) {
                     $message = "The username or password do not match our records.<br> Please try again or register a new account.<br>";
                     include 'view/login.php';
                     $message = "";
-                    break;
-                }
+                    exit;
+                } else { // if user exists, check passwords for match
 
+                    $hashCheck = password_verify($password, $clientData['password']);
+                     //if hashes don't match, create error and return to login view
+
+
+                    if ($hashCheck) {
+                        // success. Matching name and password. login
+                        $_SESSION['loggedin'] = TRUE;
+
+                        $_SESSION['name'] = $clientData['rider_name'];
+                        $sessionName = $_SESSION['name'];
+                        // create and display add ride view
+                        $trailList = getTrails($db);
+                        $trailSelect = buildTrailAddNew($trailList);
+                        include 'view/home.php';
+                        exit;
+                    } else {
+                        $message = "The username or password do not match our records.<br> Please try again or register a new account.<br>";
+                        include 'view/login.php';
+                        $message = "";
+                        exit;
+                    }
+                }
+                    break;
             }
 
         // Register New Account
@@ -96,16 +108,17 @@ if (isset($_SESSION['name'])) {
                     // check for empty fields. If yes, return with error message
                     $message = 'Please fill in all fields';
                     include 'view/login.php';
-                    break;
+                    exit;
                 } else { // if no empty fields, check to see if user is already in database.
                     $matchName = checkUser($name, $db);
                     if ($matchName == 1) {
                         // if name already in database, return error
                         $message = "There is already a user with that name. Login or register with another name.<br>";
                         include 'view/login.php';
-                        break;
-                    } else { // if not, then register user for account
-                        $registered = createUser($name, $password, $db);
+                        exit;
+                    } else { // if not, then hash password and register user for account
+                        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                        $registered = createUser($name, $passwordHash, $db);
                         if ($registered == 0) { // check to see if registration worked. If not return error
                             $message = 'There was an error with your registration. Please try again.';
                             include 'view/login.php';
@@ -114,14 +127,54 @@ if (isset($_SESSION['name'])) {
                             //success
                             $message = "Thank you for registering, $name.  Please use your username and password to login.<br>";
                             include 'view/login.php';
-                            break;
+                            exit;
 
                         }
                     }
                 }
+                break;
             }
 
+        case 'reset':
+            {
+                if (isset($_POST)) {
+                    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+                    $newPassword = filter_input(INPUT_POST, 'newPassword', FILTER_SANITIZE_STRING);
+                    if (empty($password) || empty($newPassword)) {
+                        $message = "Please fill in all fields.<br>";
 
+                    } else {
+
+                        $clientData = checkName($sessionName, $db);
+
+
+;                        $hashCheck = password_verify($password, $clientData['password']);
+                        if (!$hashCheck) {
+                            
+                            $message = "Current password didn't match records.<br>";
+                            include 'view/updatePassword.php';
+                            exit;
+                        } else {
+
+                            $passwordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+
+                            $updated = updatePassword($passwordHash, $sessionName, $db);
+
+                            if ($updated = 1) {
+                                $message = "Password updated successfully.<br>";
+
+                            } else {
+                                $message = "Error updating password. Please try again.";
+                            }
+
+                        }
+                    }
+                }
+
+                include 'view/updatePassword.php';
+                exit;
+                break;
+        }
         // deliver home page
         case 'home':
             {

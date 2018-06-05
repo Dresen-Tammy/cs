@@ -1,0 +1,47 @@
+RideKeeper Cycling App
+Login Info username 'tammy' password 'password' or you can register a new user.
+
+1. Register new user: On the login page, there is option to create new user.
+http://dresent.herokuapp.com/ride/index.php?action=logout
+
+2. Create new trail: There are 2 places to create a new trail, on the Trails page, and on the Rides page as part of adding a ride.
+http://dresent.herokuapp.com/ride/index.php?action=view&time=all  http://dresent.herokuapp.com/ride/index.php?action=addTrail
+
+3. Create new ride: On this page user can log a new ride.
+http://dresent.herokuapp.com/ride/index.php?action=addRide
+
+4. Delete ride; The user can delete any ride they have created by clicking on a link in the ride list, and clicking delete ride.
+http://dresent.herokuapp.com/ride/index.php?action=individual&time=8
+
+
+
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+http://dresent.herokuapp.com/ride/index.php?action=logout
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/Dresen-Tammy/cs-313
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+All parts of app are functional. User can register or login, using name and password. They can add a ride, add a new trail, view
+list of all trails and list of all rides, view rides by date range, trail, week, month, view individual rides and trails, and delete
+rides. They can logout of application.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Everything is working correctly, but I still want to add more javascript, ajax, and refine the look of it.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I learned more about using XMLHttpRequests to edit content without reloading page. I learned how to format dates.
+
+6. What is a benefit of having a foreign key constraint?
+It links content together information stays the same across many tables. It also allows easy joining of tables together
+through the primary and foreign keys.
+
+7. Please select the category you feel best describes your assignment:
+E - Shows creativity and excels above and beyond requirements
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I have several different ways to add and delete data, including a section that inserts both a ride and trail at once, and uses
+information returned from each insert as arguments for the next query. I also used a couple subqueries to get the information I needed.

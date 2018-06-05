@@ -20,8 +20,7 @@ function checkUser($name, $db)
     }
 }
 
-// check to see if username and password are correct to "login" to app on login page
-function checkName($name, $password, $db)
+function checkNameOld($name, $password, $db)
 {
 
     $sql = 'SELECT rider_name FROM rider WHERE rider_name=:name AND password=:password';
@@ -36,6 +35,19 @@ function checkName($name, $password, $db)
     } else {
         return 0;
     }
+}
+
+// check to see if username and password are correct to "login" to app on login page
+function checkName($name, $db)
+{
+
+    $sql = 'SELECT rider_name, password FROM rider WHERE rider_name=:name';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->execute();
+    $clientInfo = $stmt->fetch(PDO::FETCH_NAMED);
+    $stmt->closeCursor();
+    return $clientInfo;
 }
 
 // check to see if trail already in database.
@@ -219,6 +231,19 @@ function deleteRide($ride_id, $rider_name, $db) {
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':ride_id', $ride_id, PDO::PARAM_INT);
     $stmt->bindValue(':rider_name', $rider_name, PDO::PARAM_STR);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
+/* ***************************************
+*  Update
+*****************************************/
+function updatePassword($password, $name, $db) {
+    $sql = "UPDATE rider SET password = :password WHERE rider_name = :name";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();

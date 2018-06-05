@@ -143,7 +143,9 @@ header a:active {
   background-color: white;
   color: #0b8944;
 }
-
+.settings {
+  float: left;
+}
 
 
 /* Main */
