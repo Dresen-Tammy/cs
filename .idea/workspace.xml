@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1725c79c-64af-4c85-ac3f-6e9001ada4cc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/web/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/more.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/team/week7/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/team/week7/signup.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="more.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/more.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="418">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -91,8 +92,8 @@
       <file leaf-file-name="signup.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/team/week7/signup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+            <state relative-caret-position="638">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -509,12 +510,12 @@
       <workItem from="1527791843660" duration="14000" />
       <workItem from="1527791889700" duration="28105000" />
       <workItem from="1527829330817" duration="22207000" />
-      <workItem from="1528160444323" duration="18112000" />
+      <workItem from="1528160444323" duration="18268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161682000" />
+    <option name="totallyTimeSpent" value="161838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-1098" width="1322" height="1297" extended-state="0" />
@@ -836,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/team/week7/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/team/week7/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
@@ -891,17 +885,24 @@
     <entry file="file://$PROJECT_DIR$/web/home.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/team/week7/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/more.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="418">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/team/week7/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="638">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
