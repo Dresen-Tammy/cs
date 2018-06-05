@@ -1,8 +1,6 @@
-//document.addEventListener('DOMContentLoaded', () => {
 
-    //var rideDropdown = document.getElementById('trailSelect');
 
-    //rideDropdown.addEventListener('change', (e) => {
+
 function changeTrail() {
         var value = document.getElementById('selectTrail').value;
         var trailForm = document.getElementById('setTrailInfo');

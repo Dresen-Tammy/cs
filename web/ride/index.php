@@ -38,12 +38,12 @@ if (isset($_SESSION['name'])) {
             {
                 // deliver login page without processing it.
                 include 'view/login.php';
-                exit;
+                exit();
                 break;
             }
 
         // Login with processing
-        case 'LOGIN':
+        case 'login':
             {
                 // get name and password. Validate input. Check to see if name and password match database.
                 // if yes, save name to session variable, and deliver home view.
@@ -57,7 +57,7 @@ if (isset($_SESSION['name'])) {
                 if (empty($name) || empty($password)) {
                     $message = "Please fill in all fields";
                     include 'view/login.php';
-                    exit;
+                    exit();
                 }
 
 
@@ -67,7 +67,7 @@ if (isset($_SESSION['name'])) {
                     $message = "The username or password do not match our records.<br> Please try again or register a new account.<br>";
                     include 'view/login.php';
                     $message = "";
-                    exit;
+                    exit();
                 } else { // if user exists, check passwords for match
 
                     $hashCheck = password_verify($password, $clientData['password']);
@@ -84,55 +84,63 @@ if (isset($_SESSION['name'])) {
                         $trailList = getTrails($db);
                         $trailSelect = buildTrailAddNew($trailList);
                         include 'view/home.php';
-                        exit;
+                        exit();
                     } else {
                         $message = "The username or password do not match our records.<br> Please try again or register a new account.<br>";
                         include 'view/login.php';
                         $message = "";
-                        exit;
+                        exit();
                     }
                 }
                     break;
             }
 
         // Register New Account
-        case 'REGISTER':
+        case 'register':
             {
                 // get name and password. Validate input. Check to see if name and password match database.
                 // if no, add to database, save name to session variable, and deliver home view.
                 // if yes, display error message and deliver login view.
+                if (!empty($_POST)) {
+                    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+                    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+                    $passwordCheck = filter_input(INPUT_POST, 'passwordCheck', FILTER_SANITIZE_STRING);
 
-                $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-                $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-                if (empty($name) || empty($password)) {
-                    // check for empty fields. If yes, return with error message
-                    $message = 'Please fill in all fields';
-                    include 'view/login.php';
-                    exit;
-                } else { // if no empty fields, check to see if user is already in database.
-                    $matchName = checkUser($name, $db);
-                    if ($matchName == 1) {
+                    if (empty($name) || empty($password) || empty($passwordCheck)) {
+                        // check for empty fields. If yes, return with error message
+                        $message = 'Please fill in all fields<br>';
+
+                    } elseif ($password != $passwordCheck) {
+                        $message = "Passwords don't match<br>";
+
+                    } elseif (checkUser($name, $db) == 1) {// if no empty fields, check to see if user is already in database.
                         // if name already in database, return error
                         $message = "There is already a user with that name. Login or register with another name.<br>";
-                        include 'view/login.php';
-                        exit;
+
+                    } elseif (!passwordPattern($password)) {
+                        $message = "Password must be at least 8 characters with at least 1 number.<br>";
+
                     } else { // if not, then hash password and register user for account
                         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                         $registered = createUser($name, $passwordHash, $db);
                         if ($registered == 0) { // check to see if registration worked. If not return error
                             $message = 'There was an error with your registration. Please try again.';
-                            include 'view/login.php';
-                            break;
+
                         } else { // if it worked, deliver message to login.
                             //success
                             $message = "Thank you for registering, $name.  Please use your username and password to login.<br>";
                             include 'view/login.php';
-                            exit;
+                            exit();
 
+                            }
                         }
                     }
-                }
-                break;
+
+                    include 'view/register.php';
+                echo '<script type="text/javascript">loadEvents();</script>';
+                    exit();
+                    break;
+
             }
 
         case 'reset':
@@ -153,7 +161,7 @@ if (isset($_SESSION['name'])) {
                             
                             $message = "Current password didn't match records.<br>";
                             include 'view/updatePassword.php';
-                            exit;
+                            exit();
                         } else {
 
                             $passwordHash = password_hash($newPassword, PASSWORD_DEFAULT);
@@ -172,7 +180,7 @@ if (isset($_SESSION['name'])) {
                 }
 
                 include 'view/updatePassword.php';
-                exit;
+                exit();
                 break;
         }
         // deliver home page
@@ -182,6 +190,7 @@ if (isset($_SESSION['name'])) {
                 $trailList = getTrails($db);
                 $trailSelect = buildTrailAddNew($trailList);
                 include 'view/home.php';
+                exit();
                 break;
             }
 
@@ -199,19 +208,19 @@ if (isset($_SESSION['name'])) {
                         {   // show all rides for person
                             $title = "$sessionName's Rides";
                             $rideList = getRides($sessionName, $db);
-                            break;
+                            exit();
                         }
                     case 'seven':
                         {   // show last week of rides
                             $title = "Rides This Week";
                             $rideList = getRidesWeek($sessionName, $db);
-                            break;
+                            exit();
                         }
                     case 'thirty':
                         {   // show last month of rides
                             $title = "Rides This Month";
                             $rideList = getRidesMonth($sessionName, $db);
-                            break;
+                            exit();
                         }
 
                 }
@@ -220,6 +229,7 @@ if (isset($_SESSION['name'])) {
                 $list1 = "$arrayList[0]";
                 $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                 include 'view/viewRides.php';
+                exit();
                 break;
 
             }
@@ -231,7 +241,7 @@ if (isset($_SESSION['name'])) {
                 $endDate = filter_input(INPUT_POST, 'endDate', FILTER_SANITIZE_STRING);
                 $trailList = getTrails($db);
                 $trailChoose = buildTrailSelect($trailList);
-                
+
                 if (!empty($startDate) || !empty($endDate)) {
                     $sd = strtotime($startDate);
                     $ed = strtotime($endDate);
@@ -239,7 +249,7 @@ if (isset($_SESSION['name'])) {
                         $message = "Start date must be before end date.";
                         include "view/viewRides.php";
                         echo '<script type="text/javascript">unhide();</script>';
-                        break;
+                        exit();
                     } else {
                         $message = "";
                         $title = "Rides from <br>" . date('F d, Y', strtotime($startDate)) . " to " . date('F d, Y', strtotime($endDate));
@@ -248,15 +258,16 @@ if (isset($_SESSION['name'])) {
                         $list1 = "$arrayList[0]";
                         $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                         include 'view/viewRides.php';
-                        break;
+                        exit();
                     }
                 } else {
                     $message = "Please enter dates in each field.";
                     include 'view/viewRides.php';
-                    break;
+                    exit();
 
                 }
                 include 'view/viewRides.php';
+                exit();
                 break;
             }
 
@@ -275,11 +286,12 @@ if (isset($_SESSION['name'])) {
                     $list1 = "$arrayList[0]";
                     $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                     include 'view/viewRides.php';
-                    break;
+                    exit();
                 } else {
                     $message = "Please select a trail.";
                     include 'view/viewRides.php';
                     echo '<script type="text/javascript">unhide2();</script>';
+                    exit();
                     break;
                 }
             }
@@ -292,7 +304,7 @@ if (isset($_SESSION['name'])) {
                 if (empty($time)) {
                     $message = "Error loading individual Ride. Try again.";
                     include "view/viewRides.php";
-                    break;
+                    exit();
                 } else {
                     $trailList = getTrails($db);
                     $trailChoose = buildTrailSelect($trailList);
@@ -302,6 +314,7 @@ if (isset($_SESSION['name'])) {
                     $list1 = "<p>Date: $arrayList[5]<br>Trail: $arrayList[4]<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                     $deleteButton = "<a href='index.php?action=delete&time=$time' class='button2 button3'>Delete Ride</a>";
                     include "view/viewRides.php";
+                    exit();
                     break;
                 }
 
@@ -332,13 +345,13 @@ if (isset($_SESSION['name'])) {
                     $message = "Please fill in all required fields.<br>";
                     include 'view/home.php';
                     if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                    break;
+                    exit();
                 } else if ($hours < 0 || $hours > 23 || $minutes < 0 || $minutes > 59) {
                     // if hours and minutes don't make a valid time, return error.
                     $message = "Hours must between 0 - 23, and minutes must be between 0 - 59.<br>";
                     include "view/home.php";
                     if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                    break;
+                    exit();
                 } else { // if all inputs to this point are correct, continue
                     if ($trail == -1) { // check to see if new trail is being entered, if yes:
                         if (empty($trailName) || empty($location) || empty($distance) || empty($elevation)) {
@@ -346,21 +359,21 @@ if (isset($_SESSION['name'])) {
                             $message = "Please fill in all required fields.<br>";
                             include 'view/home.php';
                             if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                            break;
+                            exit();
                         } else { // if all fields are filled, check trail to see if already in db
                                 $result = checkTrail($trailName, $db);
                                 if ($result == 1) {
                                     $message = "This trail name is already in database. Use that trail or choose another name.<br>";
                                     include "view/home.php";
                                     if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                                    break;
+                                    exit();
                                 } else { // not in database
                                     $added = addTrail($trailName, $location, $distance, $elevation, $db);
                                     if (empty($added)) { // insert trail failed
                                         $message = "Sorry, there was a problem adding the trail to the database. Please try again.<br>";
                                         include 'view/home.php';
                                         if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                                        break;
+                                        exit();
                                     } else { // successfully added
                                         $trail = $added;
                                         $message = "Trail added successfully";
@@ -382,17 +395,16 @@ if (isset($_SESSION['name'])) {
                         $list1 = "<p>Date: $arrayList[5]<br>Trail: $arrayList[4]<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                         $deleteButton = "<a href='index.php?action=delete&time=$addedRide' class='button2 button3'>Delete Ride</a>";
                         include "view/viewRides.php";
-                        break;
+                        exit();
                     }
                     else { // failure
                         $message = "There was a problem adding the ride to the database. Please try again.";
                         include 'view/home.php';
                         if ($trail == -1) {echo '<script type="text/javascript">noShow();</script>'; }
-                        break;
+                        exit();
                     }
                 }
-
-
+                break;
 
             }
         case 'addTrail':
@@ -410,19 +422,19 @@ if (isset($_SESSION['name'])) {
                         $message = "Please fill in all fields.<br>";
                         include 'view/addTrail.php';
 
-                        break;
+                        exit();
                     } else { // if not empty, check to see if trail is in database.
                         $check = checkTrail($trailName, $db);
                         if ($check > 0) { //trail is in database already
                             $message = "There is already a trail with that name. Choose a different name.<br>";
                             include 'view/addTrail.php';
-                            break;
+                            exit();
                         } else  {// not already in db, add trail to db
                             $result = addTrail($trailName, $location, $distance, $elevation, $db);
                             if ($result == 0) { // check to see if added to database. if not return error
                                 $message = "Error adding trail. Please try again.<br>";
                                 include 'view/addTrail.php';
-                                break;
+                                exit();
                             } else { // trail was added to database, success message, new trail list.
                                 $message = "$trailName was successfully added to trails.<br>";
 
@@ -434,6 +446,7 @@ if (isset($_SESSION['name'])) {
                 $trailList = getTrails($db);
                 $trailDisplay = buildTrailDisplay($trailList);
                 include 'view/addTrail.php';
+                exit();
                 break;
             }
 
@@ -445,6 +458,7 @@ if (isset($_SESSION['name'])) {
                 $oneTrail = buildOneTrail($trailInfo);
                 $rideDisplay = buildRideDisplay($rideInfo);
                 include 'view/viewTrail.php';
+                exit();
                 break;
             }
 
@@ -465,8 +479,10 @@ if (isset($_SESSION['name'])) {
                     $list1 = "<p>Date: $arrayList[5]<br>Trail: $arrayList[4]<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                     $deleteButton = "<a href='index.php?action=delete&time=$time' class='button2 button3'>Delete Ride</a>";
                     include "view/viewRides.php";
-                    break;
+                    exit();
+
                 }
+                break;
             }
 
         // logout of session and deliver login page
@@ -475,6 +491,7 @@ if (isset($_SESSION['name'])) {
                 $_SESSION = array();
                 session_destroy();
                 include "view/login.php";
+                exit();
                 break;
             }
 

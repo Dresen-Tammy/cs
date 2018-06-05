@@ -18,6 +18,12 @@ html {
 body {
   position: relative;
 }
+.center {
+  width: 90%;
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+}
 
 /* Fonts */
 h1 {
@@ -26,6 +32,9 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
+.p {
+  margin-left: 45px;
+}
 
 /* nav */
 header {
@@ -33,6 +42,20 @@ header {
   height: 50px;
   background-color: #b3a580;
 
+}
+header a:hover {
+  background-color: #b7c68b;
+  transition: all .5s;
+
+
+}
+header a:active {
+  background-color: white;
+  color: #0b8944;
+}
+.logo {
+  margin-top: 0px;
+  height: 50px;
 }
 ul a, ul a:visited {
   color: #685642;
@@ -44,6 +67,9 @@ nav {
   height: 28px;
   background-color: floralwhite;
   margin-top: -14px;
+}
+.nav {
+  margin-top: 0;
 }
 
 nav ul, .navUl {
@@ -66,16 +92,10 @@ nav a, nav a:visited {
 nav a:hover {
   color: #685642
 }
-.center {
-  width: 90%;
-  max-width: 540px;
-  margin: 0 auto;
-  position: relative;
+.settings {
+  float: left;
 }
-.logo {
-  margin-top: 0px;
-  height: 50px;
-}
+/* ********Buttons *********/
 .buttons {
    position:absolute;
   right: 0;
@@ -123,6 +143,7 @@ nav a:hover {
 }
 .button4 {
   margin-top:10px;
+  text-align: center;
 
 }
 .b5 {
@@ -131,24 +152,11 @@ nav a:hover {
   border: none;
   text-decoration: underline;
   margin-top: 15px;
+  font-size: 12px;
+  color: #685642;
 }
 
-header a:hover {
-  background-color: #b7c68b;
-  transition: all .5s;
-
-
-}
-header a:active {
-  background-color: white;
-  color: #0b8944;
-}
-.settings {
-  float: left;
-}
-
-
-/* Main */
+/* ****** Main ********/
 .rideList {
   min-height: 220px;
   position: relative;
@@ -174,24 +182,22 @@ ul li {
   display: inline-block;
 
 }
-.p {
-  margin-left: 45px;
-}
-
 
 label {
-  width: 120px;
+  width: 40%;
+  min-width: 130px;
   display: inline-block;
   font-size: 16px;
   margin-top: 8px;
 }
 .label {
-  width: 120px;
+  width: 40%;
+  min-width: 130px;
   display: inline-block;
   margin-top: 5px;
 }
 .inputs {
-  width: 70%;
+  width: 55%;
   display: inline-block;
   background-color: #f1f0f0;
   height: 28px;
@@ -203,11 +209,40 @@ label {
 .error {
   color: red;
 }
+.pwd {
+  color: #685642;
+  font-size: 14px;
+  margin-bottom: 0;
+}
 .address {
   width: 50%;
   display: inline-block;
   font-size: 16px;
 }
+.hours {
+  width: 30px;
+  font-size: 16px;
+}
+.select {
+  font-size: 16px;
+  background-color: floralwhite;
+}
+.trailInfo {
+  margin-left: -40px;
+  margin-top: 5px;
+  line-height: 2em;
+  font-size: 16px;
+}
+.noMatch {
+  border: solid 1px #FF0000;
+  background-color: rgba(249,91,91,0.3);
+}
+.disabled {
+  background-color: #b7c68b;
+
+}
+
+/* ********* popups **********/
 .popup {
 
   position: absolute;
@@ -233,20 +268,7 @@ label {
   display: none;
 
 }
-.hours {
-  width: 30px;
-  font-size: 16px;
-}
-.select {
-  font-size: 16px;
-  background-color: floralwhite;
-}
-.trailInfo {
-  margin-left: -40px;
-  margin-top: 5px;
-  line-height: 2em;
-  font-size: 16px;
-}
+
 
 @media (min-width: 450px) {
   .popup {
@@ -266,7 +288,7 @@ label {
   width: 60px;
 }
 .address {
-  width: 70%;
+  width: 55%;
 }
 
 }

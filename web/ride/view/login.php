@@ -23,17 +23,9 @@ Will include fields for username and password, login button, and register button
           <h1>RideKeeper</h1>
       </div>
   </header>
-  <?php if (isset($_SESSION['loggedin'])) { echo "<nav>
-      <div class='center'>
-          <a class='settings' href='index.php?action=reset' title='settings'><img src='images/wheel.png' alt='settings'> </a>
+<nav class="nav">
 
-          <ul class='navUl'>
-              <li><a class='nav' href='index.php?action=view&time=all'>Rides</a></li>
-              <li><a class='nav' href='index.php?action=addTrail'>Trails</a></li>
-              <li><a class='nav' href='index.php?action=logout'>Log Out</a></li>
-          </ul>
-      </div>
-  </nav>"; }  ?>
+  </nav>
 
   <main>
       <div class="center">
@@ -47,8 +39,9 @@ Will include fields for username and password, login button, and register button
                       <input class="address" type="text" name="name" required><span class="error">*</span><br>
                       <label for="password" class="label">Password</label>
                       <input class="address" type="password" name="password" required><span class="error">*</span><br>
-                      <input class="button1 button4" type="submit" name="action" value="LOGIN">
-                      <input class=" button4 b5" type="submit" name="action" value="REGISTER">
+                      <input class="button1 button4" type="submit" value="LOGIN">
+                      <input type="hidden" name="action" value="login">
+                      <a class=" button4 b5" href="index.php?action=register">REGISTER</a>
 
 
 

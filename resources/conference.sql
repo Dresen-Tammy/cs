@@ -218,3 +218,7 @@ AND s.speaker_id = n.speaker_id
 AND t.talk_id = n.talk_id
 ORDER BY t.talk_name
 ;
+
+
+
+

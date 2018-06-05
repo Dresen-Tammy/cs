@@ -322,5 +322,9 @@ function buildOneTrail($trailInfo) {
     return $oneTrailDisplay;
 }
 
-
+function passwordPattern($password)
+{
+    $pattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/";
+    return preg_match($pattern, $password);
+}
     ?>
