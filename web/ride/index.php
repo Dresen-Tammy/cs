@@ -231,7 +231,7 @@ if (isset($_SESSION['name'])) {
                 $endDate = filter_input(INPUT_POST, 'endDate', FILTER_SANITIZE_STRING);
                 $trailList = getTrails($db);
                 $trailChoose = buildTrailSelect($trailList);
-
+                
                 if (!empty($startDate) || !empty($endDate)) {
                     $sd = strtotime($startDate);
                     $ed = strtotime($endDate);
@@ -243,7 +243,6 @@ if (isset($_SESSION['name'])) {
                     } else {
                         $message = "";
                         $title = "Rides from <br>" . date('F d, Y', strtotime($startDate)) . " to " . date('F d, Y', strtotime($endDate));
-                        $endDate = strtotime($endDate + 1);
                         $rideList = getRidesByDate($sessionName, $startDate, $endDate, $db);
                         $arrayList = buildRideDisplay($rideList);
                         $list1 = "$arrayList[0]";
