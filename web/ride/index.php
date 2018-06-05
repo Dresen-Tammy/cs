@@ -243,7 +243,7 @@ if (isset($_SESSION['name'])) {
                     } else {
                         $message = "";
                         $title = "Rides from <br>" . date('F d, Y', strtotime($startDate)) . " to " . date('F d, Y', strtotime($endDate));
-                        $endDate += 1;
+                        $endDate = strtotime($endDate + 1);
                         $rideList = getRidesByDate($sessionName, $startDate, $endDate, $db);
                         $arrayList = buildRideDisplay($rideList);
                         $list1 = "$arrayList[0]";
