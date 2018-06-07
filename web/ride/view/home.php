@@ -30,9 +30,11 @@ Will include fields for username and password, login button, and register button
                   <input class="address" type="text" name="rideName" value="<?php if (isset($rideName)) {echo $rideName;}?>"><span class="error"></span><br>
                   <label for="date" class="label">Ride Date</label>
                   <input class="address" type="date" name="date" value="<?php if (isset($date)) {echo $date;}?>" required><span class="error">*</span><br>
-                  <label for="rideName" class="label">Ride Length</label>
-                  Hours <input class="hours" type="number" name="hours" max='23' min='0' value="<?php if (isset($hours)) {echo $hours;}?>" required >
-                  Minutes <input class="hours" type="number" name="minutes" max='59' min='0' value="<?php if (isset($minutes)) {echo $minutes;}?>" required ><span class="error">*</span><br>
+                  <label for="hours" class="label">Ride Length</label>
+                  <div class="hourbox">
+                      <label class="hourLabel" for="hours">Hours </label> <input class="hours"  type="number" name="hours" max='23' min='0' value="<?php if (isset($hours)) {echo $hours;}?>" required >
+                      <label class="minuteLabel" for="minutes"> Minutes </label> <input class="hours" type="number" name="minutes" max='59' min='0' value="<?php if (isset($minutes)) {echo $minutes;}?>" required ><span class="error">*</span></div>
+                  <br>
                   <label for="trail" class="label">Trail Name</label>
                   <select class='select' onchange='changeTrail()' id="selectTrail" name='trail'>
                   <?php if(isset($trailSelect)) {echo $trailSelect;} ?>

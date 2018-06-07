@@ -208,19 +208,19 @@ if (isset($_SESSION['name'])) {
                         {   // show all rides for person
                             $title = "$sessionName's Rides";
                             $rideList = getRides($sessionName, $db);
-                            exit();
+                            break;
                         }
                     case 'seven':
                         {   // show last week of rides
                             $title = "Rides This Week";
                             $rideList = getRidesWeek($sessionName, $db);
-                            exit();
+                            break;
                         }
                     case 'thirty':
                         {   // show last month of rides
                             $title = "Rides This Month";
                             $rideList = getRidesMonth($sessionName, $db);
-                            exit();
+                            break;
                         }
 
                 }

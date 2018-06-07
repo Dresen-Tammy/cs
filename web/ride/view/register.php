@@ -42,7 +42,7 @@ Will include fields for username and password, login button, and register button
                 <label for="passwordCheck" class="label">Repeat Password</label>
                 <input class="address" type="password" name="passwordCheck" id="pass2"  required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"><span class="error" >*</span><br>
                 <p class="pwd"> Password must have 8 characters including at least 1 number.</p>
-                <input class=" button1 button4 disabled" id="regButton" type="submit" value="REGISTER">
+                <input class=" button1 button4" id="regButton" type="submit" value="REGISTER">
                 <input type="hidden" name="action" value="register">
                 <a class="button4 b5" href="index.php?action=log">LOGIN</a>
 

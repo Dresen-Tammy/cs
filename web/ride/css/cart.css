@@ -25,21 +25,22 @@ body {
   position: relative;
 }
 
-/* Fonts */
+/* ******* Fonts ***********/
 h1 {
   color: #015249;
   float: right;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .p {
   margin-left: 45px;
 }
 
-/* nav */
+/* ******* nav */
 header {
-  padding: 10px;
-  height: 50px;
+  padding: 5px;
+  height: 30px;
   background-color: #b3a580;
 
 }
@@ -55,7 +56,7 @@ header a:active {
 }
 .logo {
   margin-top: 0px;
-  height: 50px;
+  height: 30px;
 }
 ul a, ul a:visited {
   color: #685642;
@@ -96,10 +97,16 @@ nav a:hover {
   float: left;
 }
 /* ********Buttons *********/
-.buttons {
+/*.buttons {
    position:absolute;
   right: 0;
   bottom: 0;
+}*/
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .button1 {
   float: right;
@@ -115,7 +122,7 @@ nav a:hover {
 }
 .button1 span {
   background-color: #f4f0cb;
-  margin-left: 10px;
+  margin-right: 20px;
   border-radius: 50%;
   color: #0b8944;
   width: 20px;
@@ -124,15 +131,15 @@ nav a:hover {
   text-align: center;
 }
 .button2 {
-  display: block;
   text-decoration: none;
-  margin-top: -15px;
-  padding: 5px 10px;
+  padding: 10px;
   color: #f4f0cb;
   background-color: #0b8944;
   border-radius: 25px;
-  margin-left: 10px;
   text-align: center;
+  width: 90%;
+  margin: 5px 0;
+
 }
 .button3 {
   background-color: #685642;
@@ -144,6 +151,7 @@ nav a:hover {
 .button4 {
   margin-top:10px;
   text-align: center;
+  margin-right: 2.5%;
 
 }
 .b5 {
@@ -154,6 +162,17 @@ nav a:hover {
   margin-top: 15px;
   font-size: 12px;
   color: #685642;
+}
+
+.button1:hover {
+  -webkit-background-clip: no-clip;
+  -moz-background-clip: no-clip;
+  background-color: #b7c68b;
+  color: #0b8944;
+}
+.button1:active {
+  background-color: #f1f0f0;
+  color: #0b8944;
 }
 
 /* ****** Main ********/
@@ -182,14 +201,22 @@ ul li {
   display: inline-block;
 
 }
-
-label {
+/********* form **********/
+form {
+  background-color: rgba(255,255,255,0.5);
+  border: solid .2px #0b8944;
+  padding: 10px;
+}
+fieldset {
+  border: none;
+}
+/*label {
   width: 40%;
   min-width: 130px;
   display: inline-block;
   font-size: 16px;
   margin-top: 8px;
-}
+}*/
 .label {
   width: 40%;
   min-width: 130px;
@@ -215,17 +242,36 @@ label {
   margin-bottom: 0;
 }
 .address {
-  width: 50%;
+  width: 95%;
   display: inline-block;
   font-size: 16px;
+  background-color: floralwhite;
+}
+.hourbox {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 .hours {
-  width: 30px;
+  min-width: 40px;
   font-size: 16px;
+  flex-basis: 20%;
+  flex-grow: 2;
+  background-color: floralwhite;
+
+}
+.hourLabel {
+  padding: 0 8px 0 8px;
+
+}
+.minuteLabel {
+  padding: 0 8px;
 }
 .select {
   font-size: 16px;
   background-color: floralwhite;
+  width: 97%;
 }
 .trailInfo {
   margin-left: -40px;
@@ -261,18 +307,61 @@ label {
 .popup .address {
   width: 150px;
 }
+.popup {
+  transition: all .3s ease-in;
+  opacity: 1.0;
+}
 .hide {
   visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in;
 }
 .noShow {
   display: none;
 
 }
+.exit {
+  width: 40px;
+  height: 40px;
+  float: right;
+  overflow: visible;
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+.exit::before{
+  width: 20px;
+  content: "";
+  height: 2px;
+  background-color: #685642;
 
+  position: absolute;
+  transform: rotate(45deg);
+}
+.exit::after{
+  width: 20px;
+  content: "";
+  height: 2px;
+  background-color: #685642;
+
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.lower {
+  top: 80px;
+}
 
 @media (min-width: 450px) {
   .popup {
     left: 15%;
+  }
+  .button2 {
+    width: 110px;
+    margin: 5px;
+  }
+  .buttons {
+    margin-top: 30px;
   }
 }
 /* media queries medium */
@@ -290,9 +379,25 @@ label {
 .address {
   width: 55%;
 }
-
+.hourbox {
+  width: 58%;
+  display: inline-flex;
+}
+.select {
+  width: 56%;
+}
 }
 /* media queries large */
 @media (min-width: 800px) {
+  header {
+    padding: 10px;
+    height: 50px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .logo {
+    height: 50px;
+  }
 }
 

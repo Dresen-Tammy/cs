@@ -33,18 +33,19 @@ Will include fields for username and password, login button, and register button
           echo "Duration: " . $arrayList[3]->format('%h:%I') . " hours</p>";}
             ?>
               <div class="buttons" id="buttons">
-                  <a class="button2" href="index.php?action=addRide">Add New Ride</a><br>
+                  <?php if(isset($deleteButton)) {echo $deleteButton . "<br>";} ?>
+                  <a class="button2 button3" href="index.php?action=addRide">Add New Ride</a><br>
                   <a class="button2" onclick="unhide2()">View By Trail</a><br>
                   <a class="button2" onclick="unhide()">View By Date</a><br>
                   <a class="button2" href="index.php?action=view&time=seven">Last 7 Days</a><br>
                   <a class="button2" href="index.php?action=view&time=thirty">Last 30 Days</a><br>
-                  <?php if(isset($deleteButton)) {echo $deleteButton;} ?>
+
 
               </div>
           </div>
 
           <form class="popup hide" id="trailList" method="post" action="index.php">
-              <h2>Choose Trail</h2>
+              <h2>Choose Trail</h2><span onclick="hideForm2()" class="exit"></span>
               <?php if(isset($message)) { echo $message;}
                if(isset($trailChoose)) {echo $trailChoose;}
                 ?>
@@ -53,7 +54,7 @@ Will include fields for username and password, login button, and register button
               <input type="hidden" name="action" value="trail">
           </form>
           <form class="popup hide" id="dateForm" method="post" action="index.php">
-            <h2>Enter Start and End Dates</h2>
+            <h2>Enter Start/End Dates</h2><span class="exit" onclick="hideForm()"></span>
               <?php if(isset($message)) { echo $message;} ?>
               <label for="startDate" class="label">Start Date</label>
               <input type="date" name="startDate" class="address">

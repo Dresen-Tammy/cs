@@ -22,7 +22,7 @@ Update password page. -->
         <h2>Reset Password</h2>
         <form method="post" action="index.php">
             <fieldset>
-                <legend class="error">* required field</legend>
+                <legend class="error">* required field</legend><a href="index.php?action=home" class="exit lower"></a>
                 <?php if (isset($message)) {echo $message;} ?>
                <label for="password" class="label">Old Password</label>
                 <input class="address" type="text" name="password" required><span class="error">*</span><br>
