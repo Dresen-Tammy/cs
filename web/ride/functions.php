@@ -114,7 +114,7 @@ function getRidesByDate($name, $startDate, $endDate, $db)
 {
     $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id
-where ri.rider_name=:name AND r.ride_date > :startDate AND r.ride_date < :endDate";
+where ri.rider_name=:name AND r.ride_date >= :startDate AND r.ride_date <= :endDate";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
