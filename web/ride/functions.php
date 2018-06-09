@@ -71,7 +71,7 @@ function checkTrail($name, $db)
 // get list of rides for the user
 function getRides($name, $db)
 {
-    $sql = 'select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r 
+    $sql = 'select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r 
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id where ri.rider_name=:name';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -84,7 +84,7 @@ inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id
 // get list of rides for user over last 7 days
 function getRidesWeek($name, $db)
 {
-    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r 
+    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r 
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id 
 where ri.rider_name=:name AND r.ride_date > now() - interval '1 week'";
     $stmt = $db->prepare($sql);
@@ -98,7 +98,7 @@ where ri.rider_name=:name AND r.ride_date > now() - interval '1 week'";
 // get list of rides for user over last 1 month
 function getRidesMonth($name, $db)
 {
-$sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r
+$sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id
 where ri.rider_name=:name AND r.ride_date > now() - interval '1 month'";
 $stmt = $db->prepare($sql);
@@ -112,7 +112,7 @@ return $rideList;
 // get list of rides for user between selected dates
 function getRidesByDate($name, $startDate, $endDate, $db)
 {
-    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r
+    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id
 where ri.rider_name=:name AND r.ride_date >= :startDate AND r.ride_date <= :endDate";
     $stmt = $db->prepare($sql);
@@ -128,7 +128,7 @@ where ri.rider_name=:name AND r.ride_date >= :startDate AND r.ride_date <= :endD
 // get all rides for user on selected trail
 function getRidesByTrail($name, $trail, $db)
 {
-    $sql = 'select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r 
+    $sql = 'select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r 
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id 
 where ri.rider_name=:name AND t.trail_id=:trail';
     $stmt = $db->prepare($sql);
@@ -143,7 +143,7 @@ where ri.rider_name=:name AND t.trail_id=:trail';
 // get specific ride by ride_id and user
 function getIndividualRide($name, $ride, $db)
 {
-    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name from ride r 
+    $sql = "select r.ride_id, r.ride_date, r.ride_name, r.duration, t.distance, t.elevation, t.trail_name, t.trail_id from ride r 
 inner join rider ri on r.rider_id = ri.rider_id inner join trail t on r.trail_id = t.trail_id 
 where ri.rider_name=:name AND r.ride_id=:ride";
     $stmt = $db->prepare($sql);
@@ -250,12 +250,23 @@ function updatePassword($password, $name, $db) {
     return $rowsChanged;
 }
 
+function updateRide($id, $trail, $name, $date, $db) {
+    $sql = "UPDATE ride SET (ride_name=:name, ride_date=:date, trail_id =:trail) WHERE ride_id=:id";
+    $rideListQuery = $db->prepare($sql);
+    $rideListQuery->bindValue(':trail', $trail, PDO::PARAM_INT);
+    $rideListQuery->bindValue(':name', $name, PDO::PARAM_STR);
+    $rideListQuery->bindValue(':date', $date, PDO::PARAM_STR);
+    $rideListQuery->bindValue(':id', $id, PDO::PARAM_INT);
+    $rideListQuery->execute();
+    $rideListQuery->closeCursor();
+}
+
 /* ***************************************
 *  Functions that build displays for views
 *****************************************/
 
 // build ride display for viewRides page
-function buildRideDisplay($rideList)
+function buildRideDisplay($rideList, $back = 'all', $trail = 0, $startDate = '1820-04-06', $endDate = '1820-04-06')
 {
     // builds list of rides to display for viewRides.php
     $rideDisplay = "<ul>";
@@ -265,23 +276,36 @@ function buildRideDisplay($rideList)
     $elevation = 0;
     $trail_name = "";
     $date = date("1");
+    $dateRaw = date('1');
     $rideName = "";
+    $trail_id = 0;
     foreach ($rideList as $ride) {
         $date = date('F d, Y', strtotime($ride['ride_date']));
-        $rideDisplay .= "<li><a href='index.php?action=individual&time=$ride[ride_id]'>$date  -  $ride[ride_name]</a></li>";
+        $dateRaw = date('Y-m-d',strtotime($ride['ride_date']));
+        if ($back == 'byDate') {
+            $rideDisplay .= "<li><a href='index.php?action=individual&time=$ride[ride_id]&back=$back&startDate=$startDate&endDate=$endDate'>$date  -  $ride[ride_name]</a></li>";
+        } elseif ($back == 'trail') {
+            $rideDisplay .= "<li><a href='index.php?action=individual&time=$ride[ride_id]&back=$back&trail=$trail'>$date  -  $ride[ride_name]</a></li>";
+        } else {
+            $rideDisplay .= "<li><a href='index.php?action=individual&time=$ride[ride_id]&back=$back'>$date  -  $ride[ride_name]</a></li>";
+        }
         $distance += $ride['distance'];
         $rideName = $ride['ride_name'];
         $hours = substr($ride['duration'], 0, 2) . ' hours ' . substr($ride['duration'], 3, 2) . ' minutes';
         $duration->add(date_interval_create_from_date_string($hours));
         $elevation += $ride['elevation'];
         $trail_name = $ride['trail_name'];
+        $trail_id = $ride['trail_id'];
+
     }
+
     $inter = $time->diff($duration);
     $rideDisplay .= "</ul>";
-    $rideArray = array($rideDisplay, $distance, $elevation, $inter, $trail_name, $date, $rideName);
+    $rideArray = array($rideDisplay, $distance, $elevation, $inter, $trail_name, $date, $rideName, $trail_id, $dateRaw);
     return $rideArray;
 
 }
+
 
 
 // build select input with list of trails for add rides and for view rides by trail
@@ -327,4 +351,3 @@ function passwordPattern($password)
     $pattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/";
     return preg_match($pattern, $password);
 }
-    ?>

@@ -22,7 +22,7 @@ Will include fields for username and password, login button, and register button
       <div class="center">
 
           <?php if (isset($message)) {echo $message;} ?>
-          <h2>Add a Ride</h2>
+          <h2><?php if (isset($title)) {echo $title;} ?></h2>
           <form action="index.php" method="post">
               <fieldset>
                   <legend>* Required Fields</legend>

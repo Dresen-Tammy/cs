@@ -29,6 +29,7 @@ if (isset($_SESSION['name'])) {
     }
 
 
+
 // switch to deliver correct view.
 
     switch ($action) {
@@ -224,10 +225,15 @@ if (isset($_SESSION['name'])) {
                         }
 
                 }
-
-                $arrayList = buildRideDisplay($rideList);
+                $buttonList = "<a class=\"button2 button3\" href=\"index.php?action=addRide\">Add New Ride</a><br>
+                  <a class=\"button2\" onclick=\"unhide2()\">View By Trail</a><br>
+                  <a class=\"button2\" onclick=\"unhide()\">View By Date</a><br>
+                  <a class=\"button2\" href=\"index.php?action=view&time=seven\">Last 7 Days</a><br>
+                  <a class=\"button2\" href=\"index.php?action=view&time=thirty\">Last 30 Days</a><br>";
+                $arrayList = buildRideDisplay($rideList, $time);
                 $list1 = "$arrayList[0]";
                 $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
+
                 include 'view/viewRides.php';
                 exit();
                 break;
@@ -238,7 +244,19 @@ if (isset($_SESSION['name'])) {
         case 'byDate':
             {
                 $startDate = filter_input(INPUT_POST, 'startDate', FILTER_SANITIZE_STRING);
+                if ($startDate == NULL) {
+                    $startDate = filter_input(INPUT_GET, 'startDate', FILTER_SANITIZE_STRING);
+                }
                 $endDate = filter_input(INPUT_POST, 'endDate', FILTER_SANITIZE_STRING);
+                if ($endDate == NULL) {
+                    $endDate = filter_input(INPUT_GET, 'endDate', FILTER_SANITIZE_STRING);
+                }
+                $buttonList = "<a class=\"button2 button3\" href=\"index.php?action=addRide\">Add New Ride</a><br>
+                  <a class=\"button2\" onclick=\"unhide2()\">View By Trail</a><br>
+                  <a class=\"button2\" onclick=\"unhide()\">View By Date</a><br>
+                  <a class=\"button2\" href=\"index.php?action=view&time=seven\">Last 7 Days</a><br>
+                  <a class=\"button2\" href=\"index.php?action=view&time=thirty\">Last 30 Days</a><br>";
+
                 $trailList = getTrails($db);
                 $trailChoose = buildTrailSelect($trailList);
 
@@ -254,7 +272,7 @@ if (isset($_SESSION['name'])) {
                         $message = "";
                         $title = "Rides from <br>" . date('F d, Y', strtotime($startDate)) . " to " . date('F d, Y', strtotime($endDate));
                         $rideList = getRidesByDate($sessionName, $startDate, $endDate, $db);
-                        $arrayList = buildRideDisplay($rideList);
+                        $arrayList = buildRideDisplay($rideList, 'byDate', "", $startDate, $endDate);
                         $list1 = "$arrayList[0]";
                         $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                         include 'view/viewRides.php';
@@ -277,23 +295,38 @@ if (isset($_SESSION['name'])) {
                 $trailList = getTrails($db);
                 $trailChoose = buildTrailSelect($trailList);
                 $trail = filter_input(INPUT_POST, 'trail', FILTER_SANITIZE_STRING);
+                if ($trail == NULL) {
+                    $trail = filter_input(INPUT_GET, 'trail', FILTER_SANITIZE_STRING);
+                }
                 $message = "";
                 if (!empty($trail)) {
 
                     $rideList = getRidesByTrail($sessionName, $trail, $db);
-                    $arrayList = buildRideDisplay($rideList);
+                    $arrayList = buildRideDisplay($rideList, 'trail', $trail);
                     $title = "Rides on trail:<br> $arrayList[4]";
                     $list1 = "$arrayList[0]";
                     $list1 .= "<p>Totals:<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
+                    $buttonList = "<a class=\"button2 button3\" href=\"index.php?action=addRide\">Add New Ride</a><br>";
+                    $buttonList .= "<a class=\"button2\" onclick=\"unhide2()\">View By Trail</a><br>";
+                    $buttonList .= "<a class=\"button2\" onclick=\"unhide()\">View By Date</a><br>";
+                    $buttonList .= "<a class=\"button2\" href=\"index.php?action=view&time=seven\">Last 7 Days</a><br>";
+                    $buttonList .= "<a class=\"button2\" href=\"index.php?action=view&time=thirty\">Last 30 Days</a><br>";
                     include 'view/viewRides.php';
                     exit();
                 } else {
                     $message = "Please select a trail.";
+                    $buttonList = "<a class=\"button2 button3\" href=\"index.php?action=addRide\">Add New Ride</a><br>";
+                    $buttonList .= "<a class=\"button2\" onclick=\"unhide2()\">View By Trail</a><br>";
+                  $buttonList .= "<a class=\"button2\" onclick=\"unhide()\">View By Date</a><br>";
+                  $buttonList .= "<a class=\"button2\" href=\"index.php?action=view&time=seven\">Last 7 Days</a><br>";
+                  $buttonList .= "<a class=\"button2\" href=\"index.php?action=view&time=thirty\">Last 30 Days</a><br>";
+
                     include 'view/viewRides.php';
                     echo '<script type="text/javascript">unhide2();</script>';
                     exit();
-                    break;
+
                 }
+                break;
             }
 
 
@@ -306,20 +339,64 @@ if (isset($_SESSION['name'])) {
                     include "view/viewRides.php";
                     exit();
                 } else {
+
+                    $back = filter_input(INPUT_GET, 'back', FILTER_SANITIZE_STRING);
+                    $trail = filter_input(INPUT_GET, 'trail', FILTER_SANITIZE_STRING);
+                    $startDate = filter_input(INPUT_GET, 'startDate', FILTER_SANITIZE_STRING);
+                    $endDate = filter_input(INPUT_GET, 'endDate', FILTER_SANITIZE_STRING);
                     $trailList = getTrails($db);
                     $trailChoose = buildTrailSelect($trailList);
+                    $trailSelect = buildTrailAddNew($trailList);
                     $rideList = getIndividualRide($sessionName, $time, $db);
-                    $arrayList = buildRideDisplay($rideList);
-                    $title = "<h2>$arrayList[6]</h2>";
-                    $list1 = "<p>Date: $arrayList[5]<br>Trail: $arrayList[4]<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
+                    $arrayList = buildRideDisplay($rideList, $back);
+                    $title = "<h2 id='title'>$arrayList[6]</h2>";
+                    $list1 = "<p id='listDate'>Date: $arrayList[5]</p><p id='listTrail'>Trail: $arrayList[4]</p><p id='listDistance'>Distance: $arrayList[1] miles</p><p id='listElevation'> Elevation Gain: $arrayList[2] feet</p>";
                     $deleteButton = "<a href='index.php?action=delete&time=$time' class='button2 button3'>Delete Ride</a>";
+                    // create back button. May need to go back to trail, all, date, week, month, individual
+                    if ($back == 'trail') {
+                        $backButton = "<a href='index.php?action=trail&trail=$trail' class='button2 button3'>Back</a>";
+                    } elseif ($back == 'byDate') {
+                        $backButton = "<a href='index.php?action=byDate&startDate=$startDate&endDate=$endDate' class='button2 button3'>Back</a>";
+                    } else {
+                        $backButton = "<a href='index.php?action=view&time=$back' class='button2 button3'>Back</a>";
+                    }
+                    $editButton = "<a class='button2 button3' onclick='unhide4()'>Edit Ride</a><br>";
                     include "view/viewRides.php";
                     exit();
                     break;
                 }
 
             }
-
+        // update ride and display individual ride.
+        case 'updateRideDisplay':
+            {
+                // get information about the ride that is being edited and
+                //add it too the add ride page. Then get the input from the user
+                //and update the database.
+                if (empty($time)) {
+                    $message = "There was an error retrieving the information. Please try again.<br>";
+                    include "view/viewRides.php";
+                    exit();
+                } else {
+                    //get information about which ride and deliver add ride page.
+                    $message = "";
+                    $trailList = getTrails($db);
+                    $trailChoose = buildTrailAddNew($trailList);
+                    $rideList = getIndividualRide($sessionName, $time, $db);
+                    $rideName = $rideList['ride_name'];
+                    $date = $rideList['ride_date'];
+                    $duration = $rideList['ride_name'];
+                    $hours = $rideList['ride_name'];
+                    $minutes = $rideList['ride_name'];
+                    $trail = $rideList['ride_name'];
+                    $trailName = $rideList['ride_name'];
+                    $deleteButton = "<a href='index.php?action=delete&time=$time' class='button2 button3'>Delete Ride</a>";
+                    // create back button. May need to go back to trail, all, date, week, month, individual
+                    if ($action = all) {
+                        $backButton = "<a href='index.php?action=$action' class='button2 button3'>Back</a>";
+                    }
+                }
+            }
         // add ride to database and display individual ride
         case 'addRide':
             {
@@ -389,11 +466,18 @@ if (isset($_SESSION['name'])) {
                     if ($addedRide > 0) {
 
                         // display new ride
+
                         $rideList = getIndividualRide($sessionName, $addedRide, $db);
                         $arrayList = buildRideDisplay($rideList);
                         $title = "<h2>$arrayList[6]</h2>";
                         $list1 = "<p>Date: $arrayList[5]<br>Trail: $arrayList[4]<br>Distance: $arrayList[1] miles<br> Elevation Gain: $arrayList[2] feet<br>";
                         $deleteButton = "<a href='index.php?action=delete&time=$addedRide' class='button2 button3'>Delete Ride</a>";
+
+                        // create back button. May need to go back to trail, all, date, week, month, individual
+
+                        $backButton = "<a href='index.php?action=view&time=all' class='button2 button3'>Back</a>";
+
+                        $editButton = "<a class='button2 button3' onclick='unhide4()'>Edit Ride</a><br>";
                         include "view/viewRides.php";
                         exit();
                     }
@@ -443,6 +527,7 @@ if (isset($_SESSION['name'])) {
                         }
                     }
                 }
+                $title = "Add Ride";
                 $trailList = getTrails($db);
                 $trailDisplay = buildTrailDisplay($trailList);
                 include 'view/addTrail.php';

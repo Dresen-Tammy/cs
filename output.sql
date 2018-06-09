@@ -563,6 +563,8 @@ COPY public.ride (ride_id, rider_id, trail_id, ride_date, duration, ride_name) F
 19	5	1	2018-05-22	01:19:00	ride 2
 20	5	2	2018-05-22	01:52:00	Hills Training
 21	4	1	2018-06-05	01:05:00	Test
+23	4	4	2018-06-06	03:29:00	Fun Ride
+24	4	3	2018-06-07	06:02:00	Unnamed Ride
 \.
 
 
@@ -572,9 +574,9 @@ COPY public.ride (ride_id, rider_id, trail_id, ride_date, duration, ride_name) F
 
 COPY public.rider (rider_id, rider_name, password) FROM stdin;
 3	Tammy Dresen	$2y$10$1A3q3MGwf3JUQYbrAFroX.FsR78j4E0/NBfYSYXngk9tB4V34Jl3e
-4	tammy	$2y$10$kbLA0125h0nRDZ0rTaKXZe/i51OHqheAO5LBZDOqOsKGAzgLgJLA2
 5	david	$2y$10$uPEdL3mYkvSFaQTa.8sG..Yg6YI4kTUB.wGkA15kRogiIW61odMtG
 6	Jennifer	$2y$10$MlKTHs4wvoUidV3xwy3XTeBEfNBetH9me1Ol7skUt3yeaIWiYH0pu
+4	tammy	$2y$10$CNE67e1phTcqEDxhlpcbe.q6vtU9LddLxWOgjZ4SujKzEtnsrTO0u
 \.
 
 
@@ -665,6 +667,8 @@ COPY public.trail (trail_id, trail_name, start_location, distance, elevation) FR
 3	South on Old Highway	Fallbrook	20	1217
 4	Big Mountain	Poway	54	3863
 5	College to Torrey Pines	Park on College	70	1260
+6	To Pala Casino	76 and Old Highway	20	500
+7	Neighborhood	home	10	20
 \.
 
 
@@ -693,7 +697,7 @@ SELECT pg_catalog.setval('public.note_note_id_seq', 6, true);
 -- Name: ride_ride_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sscocugijlbupy
 --
 
-SELECT pg_catalog.setval('public.ride_ride_id_seq', 21, true);
+SELECT pg_catalog.setval('public.ride_ride_id_seq', 24, true);
 
 
 --
@@ -742,7 +746,7 @@ SELECT pg_catalog.setval('public.topic_id_seq', 11, true);
 -- Name: trail_trail_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sscocugijlbupy
 --
 
-SELECT pg_catalog.setval('public.trail_trail_id_seq', 5, true);
+SELECT pg_catalog.setval('public.trail_trail_id_seq', 7, true);
 
 
 --
