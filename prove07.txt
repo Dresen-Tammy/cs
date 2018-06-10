@@ -10,15 +10,15 @@ http://dresent.herokuapp.com/ride/
 https://github.com/Dresen-Tammy/cs-313
 
 4. Please provide a brief description of what your project does and how to use the application. Make sure to include any required information like a username and password.
-RideKeeper allows a person to create a new account, then login and add rides and trails.  Trails include name, distance, elevation and starting location. Rides include
-ride name, date and duration. User can view rides by date, by trail, and by ride name. User can also delete rides, and update their password. To update the password, click
-on the settings wheel in the top left corner.
+RideKeeper allows a person to create a new account, then login and add cycling rides and trails.  User can view rides by date, by trail, and by ride name. User can also update
+and delete rides, and update their password. To update the password, click on the settings wheel in the top left corner.
 
 To get into the app, you can either create a new account and then login, or login using username 'tammy' and password 'password1'.
 The tammy account has several trails and rides so you can see multiple rides displayed without having to add them yourself.
 
 5. Briefly describe any pieces of the assignment that are not yet working correctly.
-Everything is working correctly.
+I left out the ability update the date on the ride because I can't figure out how to extract the hours and minutes
+as numbers from the datetime in order to prepopulate the input fields.
 
 6. Provide evidence of your database design by dumping the SQL that describes your Heroku database to the file "output.sql" using the following command. Submit this SQL file in addition to the submission file for this assignment.
 
@@ -61,7 +61,7 @@ The app allows users to track their cycling workouts for accountablility and see
 all of their rides on the same trail to track their improvement.
 
 (E) 3. Demonstrates skill with HTML, CSS, and JavaScript.
-The webpage is well built in HTML. It is responsive and has transitions, pseudo-elements, and media queries in CSS. It utilizes JavaScript to capture click, change, and keyup events,
+The webpage uses semantic tags in HTML. It is responsive and has transitions, pseudo-elements, and media queries in CSS. It utilizes JavaScript to capture click, change, and keyup events,
 and changes the DOM using AJAX.
 
 (E) 4. Demonstrates skill with PHP.
@@ -79,13 +79,13 @@ correct information.
 
 (A-E) 7. Demonstrates skill in database modification.
 I have used queries that add, delete, and update information in the database. Inner joins and subqueries are used
-to modify the correct information.
+to select the correct information to modify.
 
 (E) 8. Demonstrates mastery of client-side/server-side coordination and communication.
-The structure of the database is loosely based on an MVC architecture.  The index.php page controls the coordination of the
+The structure of the database is based on an MVC architecture.  The index.php page controls the coordination of the
 different part of the web page. The functions.php page serves as the model and interacts with the database. The information
-is returned to the control and then delivered to the browser with the appropriate view.Both client and server side
+is returned to the control and then delivered to the browser with the appropriate view. Both client and server side
 validation is used on all information supplied by the user.
 
 (E) 9. Overall project evaluation.
-I think the project is fun, professional. It shows skill in using HTML, CSS, PHP, JavaScript, and SQL. It allows the user to save, compile, and display cycling data in many different ways.
+I think the project is fun, professional. It shows skill in using HTML, CSS, PHP, JavaScript, and SQL. It allows the user to save, compile, update and display cycling data in many different ways.

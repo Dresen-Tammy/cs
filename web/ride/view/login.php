@@ -41,7 +41,7 @@ Will include fields for username and password, login button, and register button
                       <input class="address" type="password" name="password" required><span class="error">*</span><br>
                       <input class="button1 button4" type="submit" value="LOGIN">
                       <input type="hidden" name="action" value="login">
-                      <a class=" button4 b5" href="index.php?action=register">REGISTER</a>
+                      <a class=" button4 b5" href="index.php?action=register" title="Register">REGISTER</a>
 
 
 

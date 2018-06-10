@@ -83,7 +83,7 @@ Will include fields for username and password, login button, and register button
                       <?php if(isset($trailSelect)) {echo $trailSelect;} ?>
                   </select><span class="error">*</span><br>
 
-                  <a class="button1 button4" onclick="editRide()">Edit Ride</a>
+                  <a class="button1 button4" title="Edit Ride" onclick="editRide()">Edit Ride</a>
 
                   <input type="hidden" id="selectChoice" value="<?php echo $arrayList[7]; ?>">
                   <input type="hidden" id="rideId" value="<?php echo $time; ?>">

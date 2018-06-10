@@ -21,7 +21,7 @@ Add trail page. Display all trails, and have form to add another. -->
     <div class="center">
         <h2>Trails</h2>
         <?php if (isset($trailDisplay)) {echo $trailDisplay;} ?>
-        <a type="button" class="button1" onclick="unhide3()">Add A Trail</a>
+        <a type="button" class="button1" title="Add a trail" onclick="unhide3()">Add A Trail</a>
         <div class="popup hide" id="trailForm">
         <h2>Enter New Trail Information</h2>
         <form method="post" action="index.php">

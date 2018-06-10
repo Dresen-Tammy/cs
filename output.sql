@@ -562,9 +562,9 @@ COPY public.ride (ride_id, rider_id, trail_id, ride_date, duration, ride_name) F
 18	5	3	2018-05-04	01:32:00	I love cycling
 19	5	1	2018-05-22	01:19:00	ride 2
 20	5	2	2018-05-22	01:52:00	Hills Training
-21	4	1	2018-06-05	01:05:00	Test
 23	4	4	2018-06-06	03:29:00	Fun Ride
 24	4	3	2018-06-07	06:02:00	Unnamed Ride
+25	4	5	2018-06-05	04:02:00	Saturday Fun
 \.
 
 
@@ -577,6 +577,7 @@ COPY public.rider (rider_id, rider_name, password) FROM stdin;
 5	david	$2y$10$uPEdL3mYkvSFaQTa.8sG..Yg6YI4kTUB.wGkA15kRogiIW61odMtG
 6	Jennifer	$2y$10$MlKTHs4wvoUidV3xwy3XTeBEfNBetH9me1Ol7skUt3yeaIWiYH0pu
 4	tammy	$2y$10$CNE67e1phTcqEDxhlpcbe.q6vtU9LddLxWOgjZ4SujKzEtnsrTO0u
+7	Betty	$2y$10$3fe0jsGByYHK2jMnze2eEO9a3q7XEt11YdhplM8fnbQCVZmmH8aee
 \.
 
 
@@ -669,6 +670,7 @@ COPY public.trail (trail_id, trail_name, start_location, distance, elevation) FR
 5	College to Torrey Pines	Park on College	70	1260
 6	To Pala Casino	76 and Old Highway	20	500
 7	Neighborhood	home	10	20
+8	Test 1	Oceanside	70	1
 \.
 
 
@@ -697,14 +699,14 @@ SELECT pg_catalog.setval('public.note_note_id_seq', 6, true);
 -- Name: ride_ride_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sscocugijlbupy
 --
 
-SELECT pg_catalog.setval('public.ride_ride_id_seq', 24, true);
+SELECT pg_catalog.setval('public.ride_ride_id_seq', 25, true);
 
 
 --
 -- Name: rider_rider_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sscocugijlbupy
 --
 
-SELECT pg_catalog.setval('public.rider_rider_id_seq', 6, true);
+SELECT pg_catalog.setval('public.rider_rider_id_seq', 7, true);
 
 
 --
@@ -746,7 +748,7 @@ SELECT pg_catalog.setval('public.topic_id_seq', 11, true);
 -- Name: trail_trail_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sscocugijlbupy
 --
 
-SELECT pg_catalog.setval('public.trail_trail_id_seq', 7, true);
+SELECT pg_catalog.setval('public.trail_trail_id_seq', 8, true);
 
 
 --
